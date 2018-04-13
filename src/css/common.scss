@@ -1,0 +1,60 @@
+$white : #FFF;
+
+$titleFont : 'Open Sans', sans-serif;
+
+
+@font-face {
+    font-family: titleFont;
+    src: url(SoulMission.ttf);
+}
+
+html, body, main, #app {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-family: 'Open Sans', sans-serif;
+	color: #2F2E2E;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.header{
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 65px;
+	padding: 0 10% 0 10%;
+	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+	z-index: 10;
+}
+
+.footer{
+	height: 55px;
+	background-color: #121212;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+	padding: 0 10% 0 10%;
+}
+
+.headerTitle{
+	font-family: titleFont;
+	font-size: 2em;
+	margin-top: 5px;
+}
+
+.nav{
+	display: flex;
+	align-items: center;
+}
+
+.navItem{
+	margin-right: 20px;
+}
