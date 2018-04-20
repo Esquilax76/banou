@@ -53,3 +53,23 @@
 .storyPageTitle{
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 1600px)
+{
+    .storyContainer{
+        padding-top: 60px;
+    }
+    .pageSubtitle{
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        
+    }
+    .storyTitle{
+        font-size: 1em;
+        
+    }
+     .storyItem{
+        width: 23%;
+        
+    }
+}
