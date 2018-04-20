@@ -60,6 +60,8 @@ import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
 import { SectionsContainer } from "react-fullpage";
 
 import { Beers } from "./beers.js";
+import { Story } from "./story.js";
+
 import { Link } from "react-router";
 
 class Header extends React.Component {
@@ -100,7 +102,7 @@ class Layout extends React.Component {
     render() {
         let options = {
             activeClass: "active", // the class that is appended to the sections links
-            anchors: ["bieres", "lieux", "histoire", "contact"], // the anchors for each sections
+            anchors: ["bieres","histoire"], // the anchors for each sections
             arrowNavigation: true, // use arrow keys
             className: "SectionContainer", // the class name for the section container
             delay: 1000, // the scroll animation speed
@@ -117,6 +119,7 @@ class Layout extends React.Component {
                 <Header/>
                 <SectionsContainer className="test" {...options}>
                     <Beers/>
+                    <Story/>
                 </SectionsContainer>
                 <Footer/>
             </main>

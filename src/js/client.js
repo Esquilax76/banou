@@ -10,12 +10,17 @@ import "../css/common.scss";
 import "../css/inprogress.scss";
 
 const app = document.getElementById("app");
+//ReactDOM.render(
+//    <Router history={hashHistory}>
+//        <Route path="/" component={Layout}>
+//            <IndexRoute component={inProgress}></IndexRoute>
+//            <Route path="bieres" component={Beers}></Route>
+//        </Route>
+//    </Router>,
+//    app
+//);
+
 ReactDOM.render(
-    <Router history={hashHistory}>
-        <Route path="/" component={Layout}>
-            <IndexRoute component={inProgress}></IndexRoute>
-            <Route path="bieres" component={Beers}></Route>
-        </Route>
-    </Router>,
+    <Layout/>,
     app
 );

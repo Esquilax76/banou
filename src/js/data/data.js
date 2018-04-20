@@ -36,4 +36,28 @@ module.exports = {
             ebc: "44"
         }
     ],
+    
+    story: [
+        {
+            title: "DECOUVERTE DE LA BIERE ARTISANALE",
+            picture: "canada",
+            description: "un truc",
+        },
+         {
+            title: "NOS DEBUTS DE BRASSEURS",
+            picture: "canada",
+            description: "un truc",
+        },
+         {
+            title: "UNE PASSION QUI S'ENRICHIE",
+            picture: "canada",
+            description: "un truc",
+        },
+         {
+            title: "NAISSANCE DE LA BANOU",
+            picture: "canada",
+            description: "un truc",
+        },
+    ]
+        
 };
