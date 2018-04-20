@@ -3,8 +3,13 @@
     src: url(SoulMission.ttf);
 }
 
+.fullpage{
+	height: calc(100% - 105px);
+	width: 100%;
+}
+
 .beersContainer{
-	height: calc(100% - 170px);
+	height: calc(100% - 50px);
 	width: 100%;
 	padding-top: 50px;
 	background-image: url("../img/background.png");
@@ -17,21 +22,23 @@
 }
 
 .bottleContainer{
-	height: 80%;
+	height: 100%;
 	width: 100%;
 }
 
 .pageTitle{
-	font-size: 1.5em;
+	font-size: 1.6em;
 	border-bottom: 1px solid #202325;
 	height: 2em;
 	margin-bottom: 50px;
+	letter-spacing: 3px;
+	color : #202325;
 }
 
 .bottle{
 	z-index: 10;
 	width: 200px;
-	height: 70%;
+	height: 80%;
 	transition: 2s;
 	position: absolute;
 	background-position: center;
@@ -42,13 +49,14 @@
 
 .description{
 	width: 225px;
-	height: 70%;
+	height: 80%;
 	transition: 2s;
 	position: absolute;
 	z-index: 9;
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: -20px;
 }
 
 .desc{
@@ -130,6 +138,10 @@
 	.descIbu{
 		padding: 5px 0 5px 0;
 	}
+
+	.descSRM{
+		padding: 0;
+	}
 	
 	.description{
 		width: 210px;
@@ -141,6 +153,6 @@
 
 	.beersContainer{
 		padding-top: 30px;
-		height: calc(100% - 150px);
+		height: calc(100% - 30px);
 	}
 }

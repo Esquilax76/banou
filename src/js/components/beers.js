@@ -11,6 +11,14 @@ import data from "../data/data.js";
     => adjust "positions" property (in state initialisation and hideDetails function) for left margin
 */
 
+/*************** TODO *********************/
+/*
+    Faire une boucle pour l'affichage des bières
+    Passer en constantes certaines propriétés
+    Ecartement des bières responsive
+
+*/
+
 import blonde from "../../img/bouteille_blonde.png";
 import brune from "../../img/bouteille_brune.png";
 import blanche from "../../img/bouteille_blanche.png";
@@ -28,16 +36,10 @@ export class Beers extends React.Component {
         super(props);
         this.state = {
             opacity: 0,
-            positions: [15, 30, 45, 60, 75],
+            positions: ["calc(50% - 500px)", "calc(50% - 300px)", "calc(50% - 100px)", "calc(50% + 100px)", "calc(50% + 300px)"],
             glasses: [glass_ipa, glass_blanche, glass_blonde, glass_rousse, glass_brune],
             glass: glass_blonde,
-            active: {
-                name: "IPA",
-                description: "Une Indian Pale Ale houblonnée aux arômes floraux et à l’amertume caractéristique.",
-                alcool: "7",
-                ibu: "70",
-                ebc: "18"
-            },
+            active: data.beers[0],
             details: 0,
             beers: data.beers,
         };
@@ -56,13 +58,18 @@ export class Beers extends React.Component {
     }
 
     showDetails(v, name) {
+        let space = 40;
+        if (screen.width > 1600) {
+            space = 55;
+        }
         let newPositions = this.state.positions;
-        let newDetails = newPositions[v] + 4;
+        const left = [-500, -300, -100, 100, 300];
+        let newDetails = "calc(50% + " + (left[v] + space) + "px)";
         newPositions.forEach(function (value, i) {
             if (i > v) {
-                newPositions[i] = newPositions[i] + 5;
+                newPositions[i] = "calc(50% + " + (left[i] + 75) + "px)";
             } else {
-                newPositions[i] = newPositions[i] - 5;
+                newPositions[i] = "calc(50% + " + (left[i] - 75) + "px)";
             }
         });
         this.findBeer(name);
@@ -70,7 +77,7 @@ export class Beers extends React.Component {
     }
 
     hideDetails() {
-        this.setState({ positions: [15, 30, 45, 60, 75], opacity: 0 });
+        this.setState({ positions: ["calc(50% - 500px)", "calc(50% - 300px)", "calc(50% - 100px)", "calc(50% + 100px)", "calc(50% + 300px)"], opacity: 0 });
     }
 
     render() {
@@ -78,13 +85,13 @@ export class Beers extends React.Component {
             <section className="beersContainer">
                 <div className="pageTitle">Découvrez nos bières artisanales</div>
                 <div className="bottleContainer">
-                    <div onMouseEnter={() => this.showDetails(0, "IPA")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${ipa})`, left: this.state.positions[0] + "%" }}/>
-                    <div onMouseEnter={() => this.showDetails(1, "BLANCHE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${blanche})`, left: this.state.positions[1] + "%" }}/>
-                    <div onMouseEnter={() => this.showDetails(2, "BLONDE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${blonde})`, left: this.state.positions[2] + "%" }}/>
-                    <div onMouseEnter={() => this.showDetails(3, "ROUSSE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${rousse})`, left: this.state.positions[3] + "%" }}/>
-                    <div onMouseEnter={() => this.showDetails(4, "BRUNE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${brune})`, left: this.state.positions[4] + "%" }}/>
+                    <div onMouseEnter={() => this.showDetails(0, "IPA")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${ipa})`, left: this.state.positions[0] }}/>
+                    <div onMouseEnter={() => this.showDetails(1, "BLANCHE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${blanche})`, left: this.state.positions[1] }}/>
+                    <div onMouseEnter={() => this.showDetails(2, "BLONDE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${blonde})`, left: this.state.positions[2] }}/>
+                    <div onMouseEnter={() => this.showDetails(3, "ROUSSE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${rousse})`, left: this.state.positions[3] }}/>
+                    <div onMouseEnter={() => this.showDetails(4, "BRUNE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${brune})`, left: this.state.positions[4] }}/>
                     {/* New line here for new beer*/}
-                    <div className="description" style={{ left: this.state.details + "%", opacity: this.state.opacity, backgroundImage: `url(${this.state.glass})` }}>
+                    <div className="description" style={{ left: this.state.details, opacity: this.state.opacity, backgroundImage: `url(${this.state.glass})` }}>
                         <div className="desc">
                             <div className="descTitle">{this.state.active.name}</div>
                             <div className="descText">{this.state.active.description}</div>
