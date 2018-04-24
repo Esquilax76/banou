@@ -1,0 +1,53 @@
+$greygreen : #A6BFBF;
+$darkgreygreen : #3E4F4F;
+$darkgrey : #202325;
+
+
+.findContainer{
+	height: 100%;
+	width: 100%;
+    margin-top: 75px;
+    padding-top: 30px;
+	background-color: $darkgreygreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+.findPageTitle{
+	color: white;
+	border-bottom: 1px solid white; 
+}
+
+.findColumn {
+	display: flex;
+	flex-direction: row;
+}
+
+.findLeftColumn {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.findRightColumn {
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.contactSubtitle {
+	font-size: 1.7em;
+	text-align: center;
+	padding: 0 100px 0 100px;
+}
