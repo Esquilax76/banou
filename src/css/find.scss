@@ -1,13 +1,13 @@
 $greygreen : #A6BFBF;
 $darkgreygreen : #3E4F4F;
 $darkgrey : #202325;
-
+$darkdarkgreygreen : #283333;
+$mediumgreygreen : #4A6161;
 
 .findContainer{
 	height: 100%;
 	width: 100%;
-    margin-top: 75px;
-    padding-top: 30px;
+    padding-top: 85px;
 	background-color: $darkgreygreen;
     display: flex;
     flex-direction: column;
@@ -24,30 +24,94 @@ $darkgrey : #202325;
 .findColumn {
 	display: flex;
 	flex-direction: row;
+	height: 100%;
+    width: 100%;
 }
 
 .findLeftColumn {
-	width: 50%;
+	width: calc(50% - 165px);
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-
+	padding: 0 80px 0 80px;
+	border-right: 5px solid $darkdarkgreygreen;
 }
 
 .findRightColumn {
 	height: 100%;
-	width: 50%;
+	width: calc(50% - 165px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-
+	padding: 0 80px 0 80px;
 }
 
-.contactSubtitle {
+
+.findImg{
+	width: 100%;
+	height: 40%;
+	background-image: url("../img/cuve.jpg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.findSubtitle{
+	height: 2em;
 	font-size: 1.7em;
-	text-align: center;
-	padding: 0 100px 0 100px;
+	background-color: $darkdarkgreygreen;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.shopButton{
+	height: 2em;
+	width: 70%;
+	background-color: $greygreen;
+	color: $darkdarkgreygreen;
+	font-size: 1.5em;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.findDescription{
+	margin-bottom: 25px;
+	font-size: 1.1em;
+}
+
+.legendImg{
+	height: 30px;
+}
+
+.legend{
+	display: flex;
+	align-items: center;
+	float: left;
+	justify-self: flex-start;
+    width: 60%;
+    margin-bottom: 10px; 
+}
+
+.selectCity{
+	width: 100%;
+	background-color: $mediumgreygreen;
+	color: white;
+	border: 0;
+	height: 2em;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.fullHeight{
+	height: 300px;
+	width: 100%;
 }

@@ -29,6 +29,7 @@
     "react-dom": "^16.1.0",
     "react-fontawesome": "^1.6.1",
     "react-fullpage": "^0.1.18",
+    "react-google-maps": "^9.4.5",
     "react-move": "^2.7.0",
     "react-router": "^3",
     "react-scripts": "^1.0.17",

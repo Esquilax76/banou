@@ -1,4 +1,5 @@
 import React from "react";
+import { withGoogleMap, GoogleMap, Marker, KmlLayer, TrafficLayer } from "react-google-maps";
 
 import "../../css/find.scss";
 import data from "../data/data.js";
@@ -7,51 +8,80 @@ import cuve from "../../img/cuve.jpg";
 import pictoBiere from "../../img/pictoBiere.png";
 import pictoPinte from "../../img/pictoPinte.png";
 
+import markerBiere from "../../img/markerBiere.png";
+import markerPinte from "../../img/markerPinte.png";
+
+const mapStyle = [{"featureType": "administrative.land_parcel","stylers": [{"visibility": "off"}]},{"featureType": "administrative.neighborhood","stylers": [{"visibility": "off"}]},{"featureType": "poi","stylers": [{"visibility": "off"}]},{"featureType": "road","elementType": "labels.icon","stylers": [{  "visibility": "off"}]},]
+
+const MyMapComponent = withGoogleMap((props) =>
+    <GoogleMap
+        defaultZoom={8}
+        defaultCenter={{ lat: 45.380072, lng: 1.931150 }}
+        defaultOptions={{ styles: mapStyle }}
+    >
+
+        {props.markers.map(function (item, index) {
+            var image = markerBiere;
+            if (item.type === "bar") {
+                image = markerPinte;
+            }
+            return (
+                <Marker key={index} position={{ lat: item.latitude, lng: item.longitude }} icon={ image } />
+            );
+        })}
+    </GoogleMap>
+);
+
 export class Find extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            story: data.find,
+            places: data.find,
+            markers: data.map,
         };
     }
 
     render() {
         return (
             <div className="findContainer">
-            <div className="pageTitle findPageTitle">Les trouver</div>
+                <div className="pageTitle findPageTitle">Les trouver</div>
 
                 <div className="findColumn">
                     <div className="findLeftColumn">
                         <div className="findSubtitle">VENTE DIRECTE</div>
-                        <div className="description">N'hésitez pas à venir nous voir, nous serons heureux de vous rencontrer et de vous faire découvrir la brasserie et nos bières!</div>
-                        <img src={cuve} className="findImg"/>
-                        <div className="description">Vous pouvez aussi les commander directement en ligne:</div>
-                        <a className="buttonBoutique" href="#boutique"></a>
+                        <div className="findDescription">N'hésitez pas à venir nous voir, nous serons heureux de vous rencontrer et de vous faire découvrir la brasserie et nos bières!</div>
+                        <div src={cuve} className="findImg"/>
+                        <div className="findDescription">Vous pouvez aussi les commander directement en ligne:</div>
+                        <a className="shopButton" href="#boutique">Découvrez notre boutique en ligne !</a>
                     </div>
 
                     <div className="findRightColumn">
                         <div className="findSubtitle">REVENDEURS</div>
-                        <div className="description">Parcourez la carte pour connaitre les revendeurs de Banou:</div>
-                        <div className="legende">  
+                        <div className="findDescription">Parcourez la carte pour connaitre les revendeurs de Banou:</div>
+                        <div className="legend">
                             <img src={pictoBiere} className="legendImg"/>
                             <div className="legendText">Les bars où vous pourrez dégustez la Banou</div>
                         </div>
-                        <div className="legende">  
+                        <div className="legend">
                             <img src={pictoPinte} className="legendImg"/>
                             <div className="legendText">Les magasins et caves où vous pourrez en achetez</div>
                         </div>
-                        <select className="selectCity">
-                            <option>Sélectionnez une ville</option>
-                            <option>Sélectionnez une ville</option>
-                            <option>Sélectionnez une ville</option>
-                            <option>Sélectionnez une ville</option>
-                            <option>Sélectionnez une ville</option>
+                        <select className="selectCity" defaultValue="nothing">
+                            <option value="nothing" disabled>Sélectionnez une ville</option>
+                            {this.state.places.map(function (item, index) {
+                                return (
+                                    <option key={index} value={item}>{item}</option>
+                                );
+                            }.bind(this))}
                         </select>
+                        <MyMapComponent
+                            containerElement={<div className="fullHeight" />}
+                            mapElement={<div className="fullHeight" />}
+                            markers={this.state.markers}
+                        />
                     </div>
                 </div>
-
             </div>
-            
         );
     }
 }

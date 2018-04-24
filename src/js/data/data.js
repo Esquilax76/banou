@@ -67,5 +67,26 @@ module.exports = {
             picture: "../../img/story4.jpg",
             description: "La Banou prendra officiellement vit en décembre 2018. Nous quitterons alors nos emplois respectifs et déserterons la capitale pour rejoindre notre chère Corrèze. La mise en place de la brasserie pourra prendre un peu de temps, mais nous ferons notre maximum pour que vous puissiez la déguster d’ici l’été prochain !",
         },
+    ],
+    find: ["Brive", "Argentat", "Bordeaux", "Paris"],
+    map: [
+        {
+            name: "Les 3 caves",
+            type: "cave",
+            latitude: 45.1660443,
+            longitude: 1.5261588
+        },
+        {
+            name: "Le Watson",
+            type: "bar",
+            latitude: 45.1581444,
+            longitude: 1.5328519
+        },
+        {
+            name: "V And B Brive",
+            type: "bar",
+            latitude: 45.1496541,
+            longitude: 1.4829608
+        },
     ]
 };

@@ -9,7 +9,6 @@ import { Find } from "./find.js";
 import { Story } from "./story.js";
 import { Contact } from "./contact.js";
 
-
 import { Link } from "react-router";
 
 class Header extends React.Component {
