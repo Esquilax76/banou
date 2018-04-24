@@ -1,3 +1,8 @@
+@font-face {
+    font-family: futura;
+    src: url(Futura_Light_Regular.otf);
+}
+
 .contactContainer{
 	height: 100%;
 	width: 100%;
@@ -95,8 +100,7 @@
 	background-color: #A6BFBF;
 	border: 0;
 	padding: 10px 10px 0 10px;
-
-
+	font-family: futura;
 }
 
 .input {
@@ -106,6 +110,7 @@
 	margin: 0;
 	height: 4em;
 	padding: 0 10px 0 10px;
+	font-family: futura;
 }
 
 .smallInput {

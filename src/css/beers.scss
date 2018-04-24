@@ -1,7 +1,4 @@
-@font-face {
-    font-family: titleFont;
-    src: url(SoulMission.ttf);
-}
+$darkgrey : #202325;
 
 .fullpage{
 	height: calc(100% - 105px);
@@ -29,11 +26,11 @@
 
 .pageTitle{
 	font-size: 1.6em;
-	border-bottom: 1px solid #202325;
+	border-bottom: 1px solid $darkgrey;
 	height: 2em;
 	margin-bottom: 50px;
 	letter-spacing: 3px;
-	color : #202325;
+	color : $darkgrey;
 }
 
 .bottle{

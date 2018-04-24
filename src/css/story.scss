@@ -1,7 +1,9 @@
+$greygreen : #A6BFBF;
+
 .storyContainer{
 	height: 100%;
 	width: 100%;
-	margin-top: 65px;
+    margin-top: 45px;
     padding-top: 30px;
 	background-color: white;
     display: flex;
@@ -39,15 +41,21 @@
 }
 
 .storyDescription{
-    background-color: #A6BFBF;
-    padding: 10px;
-    width: calc(100% - 20px);
+    background-color: $greygreen;
+    padding: 20px;
+    width: calc(100% - 40px);
     height: 45%;
+    text-align: justify;
+    font-size: 1.1em;
 }
 
 .storyImage{
     width: 100%;
     margin-bottom: 10px;
+    height: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .storyPageTitle{

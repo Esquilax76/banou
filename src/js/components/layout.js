@@ -17,7 +17,7 @@ class Header extends React.Component {
                 <div className="headerTitle">LA BANOU</div>
                 <nav class="nav">
                     <a href="#bieres" className="navItem">NOS BIERES</a>
-                    <a href="#lieux" className="navItem">LES TROUVER</a>
+                    {/*<a href="#lieux" className="navItem">LES TROUVER</a>*/}
                     <a href="#histoire" className="navItem">NOTRE HISTOIRE</a>
                     <a href="#contact" className="navItem">CONTACT</a>
                 </nav>
@@ -48,7 +48,7 @@ class Layout extends React.Component {
     render() {
         let options = {
             activeClass: "active", // the class that is appended to the sections links
-            anchors: ["bieres", "histoire","contact"], // the anchors for each sections
+            anchors: ["bieres", "histoire", "contact"], // the anchors for each sections
             arrowNavigation: true, // use arrow keys
             className: "SectionContainer", // the class name for the section container
             delay: 1000, // the scroll animation speed

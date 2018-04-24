@@ -3,42 +3,12 @@ import React from "react";
 import "../../css/beers.scss";
 import data from "../data/data.js";
 
-/*
-    To add beer to collection :
-    => add new object to data.js file's "beers" array with details of the new beer
-    => import images for bottle and glass (as shown just below)
-    => add new image name to glasses property in state initialisation
-    => adjust "positions" property (in state initialisation and hideDetails function) for left margin
-*/
-
-/*************** TODO *********************/
-/*
-    Faire une boucle pour l'affichage des bières
-    Passer en constantes certaines propriétés
-    Ecartement des bières responsive
-
-*/
-
-import blonde from "../../img/bouteille_blonde.png";
-import brune from "../../img/bouteille_brune.png";
-import blanche from "../../img/bouteille_blanche.png";
-import ipa from "../../img/bouteille_ipa.png";
-import rousse from "../../img/bouteille_rousse.png";
-
-import glass_blonde from "../../img/verre_blonde.png";
-import glass_brune from "../../img/verre_brune.png";
-import glass_blanche from "../../img/verre_blanche.png";
-import glass_ipa from "../../img/verre_ipa.png";
-import glass_rousse from "../../img/verre_rousse.png";
-
 export class Beers extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             opacity: 0,
             positions: ["calc(50% - 500px)", "calc(50% - 300px)", "calc(50% - 100px)", "calc(50% + 100px)", "calc(50% + 300px)"],
-            glasses: [glass_ipa, glass_blanche, glass_blonde, glass_rousse, glass_brune],
-            glass: glass_blonde,
             active: data.beers[0],
             details: 0,
             beers: data.beers,
@@ -73,7 +43,7 @@ export class Beers extends React.Component {
             }
         });
         this.findBeer(name);
-        this.setState({ positions: newPositions, opacity: 1, details: newDetails, glass: this.state.glasses[v] });
+        this.setState({ positions: newPositions, opacity: 1, details: newDetails });
     }
 
     hideDetails() {
@@ -85,13 +55,18 @@ export class Beers extends React.Component {
             <section className="beersContainer">
                 <div className="pageTitle">Découvrez nos bières artisanales</div>
                 <div className="bottleContainer">
-                    <div onMouseEnter={() => this.showDetails(0, "IPA")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${ipa})`, left: this.state.positions[0] }}/>
-                    <div onMouseEnter={() => this.showDetails(1, "BLANCHE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${blanche})`, left: this.state.positions[1] }}/>
-                    <div onMouseEnter={() => this.showDetails(2, "BLONDE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${blonde})`, left: this.state.positions[2] }}/>
-                    <div onMouseEnter={() => this.showDetails(3, "ROUSSE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${rousse})`, left: this.state.positions[3] }}/>
-                    <div onMouseEnter={() => this.showDetails(4, "BRUNE")} onMouseLeave={this.hideDetails} className="bottle" style={{ backgroundImage: `url(${brune})`, left: this.state.positions[4] }}/>
-                    {/* New line here for new beer*/}
-                    <div className="description" style={{ left: this.state.details, opacity: this.state.opacity, backgroundImage: `url(${this.state.glass})` }}>
+                    {this.state.beers.map(function (item, index) {
+                        return (
+                            <div
+                                key={index}
+                                onMouseEnter={() => this.showDetails(index, item.name)}
+                                onMouseLeave={this.hideDetails}
+                                className="bottle"
+                                style={{ backgroundImage: "url(" + item.bottle + ")", left: this.state.positions[index] }}
+                            />
+                        );
+                    }.bind(this))}
+                    <div className="description" style={{ left: this.state.details, opacity: this.state.opacity, backgroundImage: `url(${this.state.active.glass})` }}>
                         <div className="desc">
                             <div className="descTitle">{this.state.active.name}</div>
                             <div className="descText">{this.state.active.description}</div>

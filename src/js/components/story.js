@@ -21,9 +21,9 @@ export class Story extends React.Component {
                 <div className="storyItems">
                     {this.state.story.map(function (item) {
                         return (
-                            <div className="storyItem">
+                            <div className="storyItem" key={item.title}>
                                 <div className="storyTitle">{item.title}</div>
-                                <img src={cuve} className="storyImage"/>
+                                <div className="storyImage" style={{ backgroundImage: "url(" + item.picture + ")" }}/>
                                 <div className="storyDescription">{item.description}</div>
                             </div>
                         );

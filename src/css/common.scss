@@ -1,7 +1,4 @@
-$white : #FFF;
-
-$titleFont : 'Open Sans', sans-serif;
-
+$darkgrey : #202325;
 
 @font-face {
     font-family: titleFont;
@@ -30,7 +27,7 @@ a{
 }
 
 .header{
-	background-color: #202325;
+	background-color: $darkgrey;
 	color: white;
 	display: flex;
 	align-items: center;
@@ -46,7 +43,7 @@ a{
 
 .footer{
 	height: 40px;
-	background-color: #202325;
+	background-color: $darkgrey;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -79,5 +76,5 @@ a{
 }
 
 .Navigation-Anchor{
-	background-color: white !important;
+	background-color: $darkgrey !important;
 }
