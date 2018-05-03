@@ -4,6 +4,8 @@ import { withGoogleMap, GoogleMap, Marker, KmlLayer, TrafficLayer } from "react-
 import "../../css/find.scss";
 import data from "../data/data.js";
 
+import { Link } from "react-router";
+
 import cuve from "../../img/cuve.jpg";
 import pictoBiere from "../../img/pictoBiere.png";
 import pictoPinte from "../../img/pictoPinte.png";
@@ -15,8 +17,8 @@ const mapStyle = [{"featureType": "administrative.land_parcel","stylers": [{"vis
 
 const MyMapComponent = withGoogleMap((props) =>
     <GoogleMap
-        defaultZoom={8}
-        defaultCenter={{ lat: 45.380072, lng: 1.931150 }}
+        zoom={props.zoom}
+        center={{ lat: props.lat, lng: props.lng }}
         defaultOptions={{ styles: mapStyle }}
     >
 
@@ -38,7 +40,19 @@ export class Find extends React.Component {
         this.state = {
             places: data.find,
             markers: data.map,
+            zoom: 13,
+            lat: 45.380072,
+            lng: 1.931150,
         };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+
+    handleChange(e){
+        console.log(e.target.value.split("_")[0])
+        console.log(e.target.value.split("_")[1])
+        this.setState({ lat: parseFloat(e.target.value.split("_")[0]), lng: parseFloat(e.target.value.split("_")[1]) });
     }
 
     render() {
@@ -52,7 +66,7 @@ export class Find extends React.Component {
                         <div className="findDescription">N'hésitez pas à venir nous voir, nous serons heureux de vous rencontrer et de vous faire découvrir la brasserie et nos bières!</div>
                         <div src={cuve} className="findImg"/>
                         <div className="findDescription">Vous pouvez aussi les commander directement en ligne:</div>
-                        <a className="shopButton" href="#boutique">Découvrez notre boutique en ligne !</a>
+                        <Link to="/boutique" className="shopButton">Découvrez notre boutique en ligne !</Link>
                     </div>
 
                     <div className="findRightColumn">
@@ -66,11 +80,11 @@ export class Find extends React.Component {
                             <img src={pictoPinte} className="legendImg"/>
                             <div className="legendText">Les magasins et caves où vous pourrez en achetez</div>
                         </div>
-                        <select className="selectCity" defaultValue="nothing">
+                        <select className="selectCity" defaultValue="nothing" onChange={(e) => this.handleChange(e)}>
                             <option value="nothing" disabled>Sélectionnez une ville</option>
                             {this.state.places.map(function (item, index) {
                                 return (
-                                    <option key={index} value={item}>{item}</option>
+                                    <option key={index} value={item.latitude + "_" + item.longitude}>{item.name}</option>
                                 );
                             }.bind(this))}
                         </select>
@@ -78,6 +92,9 @@ export class Find extends React.Component {
                             containerElement={<div className="fullHeight" />}
                             mapElement={<div className="fullHeight" />}
                             markers={this.state.markers}
+                            zoom={this.state.zoom}
+                            lat={this.state.lat}
+                            lng={this.state.lng}
                         />
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import React from "react";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare';
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
-import { SectionsContainer } from "react-fullpage";
+import { SectionsContainer, ScrollToTopOnMount } from "react-fullpage";
 
 import { Beers } from "./beers.js";
 import { Find } from "./find.js";
@@ -15,13 +15,23 @@ class Header extends React.Component {
     render() {
         return (
             <header className="header">
-                <div className="headerTitle">LA BANOU</div>
+                <Link to="/" className="headerTitle">LA BANOU</Link>
                 <nav class="nav">
-                    <a href="#bieres" className="navItem">NOS BIERES</a>
-                    <a href="#lieux" className="navItem">LES TROUVER</a>
-                    <a href="#histoire" className="navItem">NOTRE HISTOIRE</a>
-                    <a href="#contact" className="navItem">CONTACT</a>
+                    <a href="#bieres" className="navItem hvr-underline-reveal">NOS BIERES</a>
+                    <a href="#lieux" className="navItem hvr-underline-reveal">LES TROUVER</a>
+                    <a href="#histoire" className="navItem hvr-underline-reveal">NOTRE HISTOIRE</a>
+                    <a href="#contact" className="navItem hvr-underline-reveal">CONTACT</a>
                 </nav>
+            </header>
+        );
+    }
+}
+
+class HeaderReduced extends React.Component {
+    render() {
+        return (
+            <header className="header">
+                <Link to="/" className="headerTitle">LA BANOU</Link>
             </header>
         );
     }
@@ -32,7 +42,8 @@ class Footer extends React.Component {
         return (
             <footer className="footer">
                 <div>© 2017 LA BANOU</div>
-                <div className="links">
+                <Link to="/credits" className="creditsButton footerChild">Mentions Légales</Link>
+                <div className="links footerChild">
                     <a href="https://www.facebook.com/bierelabanou" target="blank">
                         <FontAwesomeIcon icon={faFacebookSquare} className="linkIcon"/>
                     </a>
@@ -58,18 +69,13 @@ class Layout extends React.Component {
             //sectionClassName: "Section", // the section class name
             sectionPaddingTop: "0", // the section top padding
             sectionPaddingBottom: "0", // the section bottom padding
-            verticalAlign: false // align the content of each section vertical
+            verticalAlign: false, // align the content of each section vertical
         };
 
         return (
             <main>
-                <Header/>
-                <SectionsContainer className="sectionContainer" {...options}>
-                    <Beers/>
-                    <Find/>
-                    <Story/>
-                    <Contact/>
-                </SectionsContainer>
+            {this.props.location.pathname === "/" ? ( <Header/> ) : ( <div/> )}
+                {this.props.children}
                 <Footer/>
             </main>
         );

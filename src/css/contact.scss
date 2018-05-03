@@ -1,13 +1,12 @@
 @font-face {
     font-family: futura;
-    src: url(Futura_Light_Regular.otf);
+    src: url(../fonts/Futura_Light_Regular.otf);
 }
 
 .contactContainer{
 	height: 100%;
 	width: 100%;
-	margin-top: 65px;
-    padding-top: 20px;
+    padding-top: 105px;
 	background-color: white;
     display: flex;
     flex-direction: row;
@@ -128,4 +127,9 @@
 
 input:focus, textarea:focus {
 	outline: none;
+}
+
+@media screen and (max-width: 1600px)
+{
+
 }

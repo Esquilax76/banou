@@ -3,24 +3,26 @@ import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, browserHistory, hashHistory } from "react-router";
 
 import { Beers } from "./components/beers.js";
-import { inProgress } from "./components/inprogress.js";
+import { Shop } from "./components/shop.js";
+import { Credits } from "./components/credits.js";
+import { Fullpage } from "./components/fullpage.js";
 import Layout from "./components/layout.js";
 
 import "../css/common.scss";
-import "../css/inprogress.scss";
 
 const app = document.getElementById("app");
-//ReactDOM.render(
-//    <Router history={hashHistory}>
-//        <Route path="/" component={Layout}>
-//            <IndexRoute component={inProgress}></IndexRoute>
-//            <Route path="bieres" component={Beers}></Route>
-//        </Route>
-//    </Router>,
-//    app
-//);
-
 ReactDOM.render(
-    <Layout/>,
-    app
+   <Router history={hashHistory}>
+       <Route path="/" component={Layout}>
+           <IndexRoute component={Fullpage}></IndexRoute>
+           <Route path="boutique" component={Shop}></Route>
+           <Route path="credits" component={Credits}></Route>
+       </Route>
+   </Router>,
+   app
 );
+
+// ReactDOM.render(
+//     <Layout/>,
+//     app
+// );

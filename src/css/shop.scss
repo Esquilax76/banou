@@ -1,0 +1,77 @@
+$darkgrey : #202325;
+
+.shopContainer{
+	height: calc(100% - 155px);
+    overflow-y: scroll;
+    width: 100%;
+    margin-top: 65px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shopTitle{
+
+}
+
+.shopItems{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 60%;
+}
+
+.shopItem{
+	width: 32%;
+	border: 1px solid black;
+	margin-bottom: 20px;
+	background-color: $darkgrey;
+}
+
+.shopItemImage{
+	width: 100%;
+}
+
+.shopItemTitle{
+	font-size: 1.1em;
+	padding: 10px 0 0 10px;
+	color: white;
+}
+
+.shopItemPrice{
+	font-size: 0.8em;
+	padding: 10px 0 10px 10px;
+	color: #6E6968;
+}
+
+.disable{
+	height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+}
+
+.popUp{
+	width: 50%;
+    background-color: white;
+    height: calc(100% - 165px);
+    margin-left: 25%;
+    margin-top: 100px;
+}
+
+.popUpImage{
+	width: 30%;
+}
+
+.close{
+	width: 30px;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    float: right;
+    margin-right: -15px;
+    margin-top: -15px;
+}
