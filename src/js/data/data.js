@@ -147,23 +147,30 @@ module.exports = {
     ],
     shop: [
         {
-            name: "PACK DECOUVERTE",
-            size: "",
-            package: "",
-            proPrice: "",
-            publicPrice: "15.00€",
-            stock: 100,
-            description: "C'est un pack découverte",
-            active: true
-        },
-        {
             name: "IPA",
             size: "",
             package: "",
             proPrice: "",
-            publicPrice: "2.80€",
+            publicPrice: {
+                unit: {
+                    33: "2.80€",
+                    75: "5.00€"
+                },
+                pack: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+                carton: {
+                    33: "28.00€",
+                    75: "50.00€"
+                },
+                fut: {
+                    33: "105.00€",
+                    75: "105.00€"
+                }
+            },
             stock: 100,
-            description: "C'est une IPA",
+            description: "Une Indian Pale Ale houblonnée aux arômes floraux et à l’amertume caractéristique.",
             active: true,
         },
         {
@@ -171,9 +178,26 @@ module.exports = {
             size: "",
             package: "",
             proPrice: "",
-            publicPrice: "2.80€",
+            publicPrice: {
+                unit: {
+                    33: "2.80€",
+                    75: "5.00€"
+                },
+                pack: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+                carton: {
+                    33: "28.00€",
+                    75: "50.00€"
+                },
+                fut: {
+                    33: "105.00€",
+                    75: "105.00€"
+                }
+            },
             stock: 100,
-            description: "C'est une blonde",
+            description: "Une pale ale classique, désaltérante et légère, aux arômes équilibrés de céréales et de houblons.",
             active: true
         },
         {
@@ -181,9 +205,26 @@ module.exports = {
             size: "",
             package: "",
             proPrice: "",
-            publicPrice: "2.80€",
+            publicPrice: {
+                unit: {
+                    33: "2.80€",
+                    75: "5.00€"
+                },
+                pack: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+                carton: {
+                    33: "28.00€",
+                    75: "50.00€"
+                },
+                fut: {
+                    33: "105.00€",
+                    75: "105.00€"
+                }
+            },
             stock: 100,
-            description: "C'est une blanche",
+            description: "La bière d’été par excellence, rafraichissante aux arômes d’agrumes",
             active: true
         },
         {
@@ -191,9 +232,26 @@ module.exports = {
             size: "",
             package: "",
             proPrice: "",
-            publicPrice: "2.80€",
+            publicPrice: {
+                unit: {
+                    33: "2.80€",
+                    75: "5.00€"
+                },
+                pack: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+                carton: {
+                    33: "28.00€",
+                    75: "50.00€"
+                },
+                fut: {
+                    33: "105.00€",
+                    75: "105.00€"
+                }
+            },
             stock: 100,
-            description: "C'est une rousse",
+            description: "Une bière à la robe élégante, appréciée des amateurs pour sa finesse et la richesse de ses arômes.",
             active: true
         },
         {
@@ -201,9 +259,53 @@ module.exports = {
             size: "",
             package: "",
             proPrice: "",
-            publicPrice: "2.80€",
+            publicPrice: {
+                unit: {
+                    33: "2.80€",
+                    75: "5.00€"
+                },
+                pack: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+                carton: {
+                    33: "28.00€",
+                    75: "50.00€"
+                },
+                fut: {
+                    33: "105.00€",
+                    75: "105.00€"
+                }
+            },
             stock: 100,
-            description: "C'est une brune",
+            description: "Une bière de caractère, réconfortante, aux arômes torréfiés.",
+            active: true
+        },
+        {
+            name: "PACK DECOUVERTE",
+            size: "",
+            package: "",
+            proPrice: "",
+            publicPrice: {
+                unit: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+                pack: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+                carton: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+                fut: {
+                    33: "15.00€",
+                    75: "28.00€"
+                },
+            },
+            stock: 100,
+            description: "Découvrez la banou à travers ce pack comprenant:<ul><li>Une Banou Blanche</li><li>Une Banou Blonde</li><li>Une Banou Brune</li><li>Une Banou Rousse</li><li>Une Banou IPA</li><li>La Banou de saison</li></ul>",
             active: true
         },
     ]

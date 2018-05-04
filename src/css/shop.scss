@@ -1,4 +1,11 @@
 $darkgrey : #202325;
+$darkgreygreen : #3E4F4F;
+$greygreen : #A6BFBF;
+
+@font-face {
+    font-family: titleFont;
+    src: url(../fonts/SoulMission.ttf);
+}
 
 .shopContainer{
 	height: calc(100% - 155px);
@@ -27,6 +34,12 @@ $darkgrey : #202325;
 	border: 1px solid black;
 	margin-bottom: 20px;
 	background-color: $darkgrey;
+	cursor: pointer;
+    transition: 0.3s;
+}
+
+.shopItem:hover{
+	box-shadow: 7px 8px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
 .shopItemImage{
@@ -49,7 +62,7 @@ $darkgrey : #202325;
 	height: 100%;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
 }
@@ -57,21 +70,137 @@ $darkgrey : #202325;
 .popUp{
 	width: 50%;
     background-color: white;
-    height: calc(100% - 165px);
     margin-left: 25%;
-    margin-top: 100px;
-}
-
-.popUpImage{
-	width: 30%;
+    margin-top: 10%;
+    border-radius: 5px;
 }
 
 .close{
-	width: 30px;
+    border-radius: 30px;
+    border: 3px solid $darkgrey;
+    width: 30px;
     height: 30px;
-    background-color: black;
+    background-color: white;
     position: relative;
     float: right;
     margin-right: -15px;
     margin-top: -15px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    transform: rotate(0.125turn);
+    cursor: pointer;
+}
+
+.popUpHeader{
+	background-color: $darkgrey;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	font-size: 1.5em;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.popUpContent{
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.popUpImage{
+	padding: 20px;
+	width: 45%;
+}
+.popUpDescription{
+	width: 55%;
+	height: 100%;
+	padding: 20px;
+}
+.popUpTitle{
+	font-size: 1.5em;
+	font-family: titleFont;
+	margin-bottom: 5px;
+}
+
+.popUpText{
+	margin-top: 10px;
+	margin-bottom: 20px
+}
+
+.popUpinput{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.inputLabel{
+	color: #6E6968;
+	margin-bottom: 10px;
+}
+
+.popUpSelect{
+	border: 1px solid #d3d0cf;
+	color: #6E6968;
+	width: 50%;
+	padding: 10px;
+}
+
+.popUpNumber{
+	border: 1px solid #d3d0cf;
+	color: #6E6968;
+	width: calc(50% - 22px);
+	padding: 10px;
+}
+
+.popUpPrice{
+	margin-bottom: 20px;
+	font-size: 1.2em;
+}
+
+.popUpPriceDetail{
+	font-size: 0.6em;
+	color: #6E6968;
+	margin-left: 20px;
+}
+
+.addToBasket{
+	display: flex;
+	background-color: $greygreen;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 10px;
+	width: calc(50% - 20px);
+	color: $darkgrey;
+}
+
+.addToBasket:hover{
+	background-color: $darkgreygreen;
+	color: white;
+}
+
+.radio:last-of-type{
+	margin-left: 20px;
+}
+
+.basket{
+	background-image: url("../img/basket.png");
+	width: 40px;
+    height: 40px;
+    line-height: 55px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    color: $darkgrey;
+    cursor: pointer;
+}
+
+.basketMenu{
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: white;
+	transition: 1s;
 }
