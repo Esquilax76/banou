@@ -12,6 +12,7 @@ export class Beers extends React.Component {
             active: data.beers[0],
             details: 0,
             beers: data.beers,
+            current: {position: 0, name: "IPA"}
         };
         this.showDetails = this.showDetails.bind(this);
         this.hideDetails = this.hideDetails.bind(this);
@@ -43,7 +44,7 @@ export class Beers extends React.Component {
             }
         });
         this.findBeer(name);
-        this.setState({ positions: newPositions, opacity: 1, details: newDetails });
+        this.setState({ positions: newPositions, opacity: 1, details: newDetails, current: {position: v, name: name} });
     }
 
     hideDetails() {
@@ -66,7 +67,11 @@ export class Beers extends React.Component {
                             />
                         );
                     }.bind(this))}
-                    <div className="description" style={{ left: this.state.details, opacity: this.state.opacity, backgroundImage: `url(${this.state.active.glass})` }}>
+                    <div
+                        className="description"
+                        onMouseEnter={() => this.showDetails(this.state.current.position, this.state.current.name)}
+                        style={{ left: this.state.details, opacity: this.state.opacity, backgroundImage: `url(${this.state.active.glass})` }}
+                    >
                         <div className="desc">
                             <div className="descTitle">{this.state.active.name}</div>
                             <div className="descText">{this.state.active.description}</div>

@@ -18,9 +18,6 @@ $greygreen : #A6BFBF;
     align-items: center;
 }
 
-.shopTitle{
-
-}
 
 .shopItems{
 	display: flex;
@@ -65,13 +62,14 @@ $greygreen : #A6BFBF;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
+    display: flex;
+    align-items: center;
 }
 
 .popUp{
 	width: 50%;
     background-color: white;
     margin-left: 25%;
-    margin-top: 10%;
     border-radius: 5px;
 }
 
@@ -202,5 +200,85 @@ $greygreen : #A6BFBF;
 	right: 0;
 	top: 0;
 	background-color: white;
-	transition: 1s;
+	transition: 0.3s;
+	overflow-y: auto;
+}
+
+.basketMenuHeader{
+	background-color: $darkgrey;
+	height: 65px;
+	line-height: 65px;
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+}
+
+.basketMenuContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 85px);
+}
+
+.basketItem{
+	display: flex;
+	text-align: center;
+	margin: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $darkgrey;
+}
+
+.basketItemImage{
+	height: 100px;
+}
+
+.basketItemDesc{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0 0 0 10px;
+	justify-content: space-between;
+}
+
+.basketItemTitle{
+	font-size: 1.2em;
+}
+
+.basketItemInfo{
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.emptyBasket{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+.basketTotal{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 20px;
+    align-self: flex-end;
+    bottom: 0;
+}
+
+.basketButton{
+	background-color: $darkgrey;
+    height: 1.5em;
+    line-height: 1.5em;
+    color: white;
+    padding: 10px;
+}
+
+.basketButton:hover{
+	background-color: $darkgreygreen;
+}
+
+.basketValidation{
+	display: flex;
+    align-items: center;
+    justify-content: space-around
 }

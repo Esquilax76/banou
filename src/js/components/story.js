@@ -8,15 +8,13 @@ import cuve from "../../img/cuve.jpg";
 export class Story extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            story: data.story,
-        };
+        this.state = { story: data.story };
     }
 
     render() {
         return (
             <div className="storyContainer">
-                <div className="pageTitle storyPageTitle">Notre histoire</div>
+                <div className="pageTitle storyPageTitle">NOTRE HISTOIRE</div>
                 <div className="pageSubtitle">Nous souhaitons partager notre passion pour la bière et notre amour de la Corrèze, à travers nos bières brassées de manière artisanale</div>
                 <div className="storyItems">
                     {this.state.story.map(function (item) {

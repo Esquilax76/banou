@@ -95,20 +95,42 @@ module.exports = {
             name: "Les 3 caves",
             type: "cave",
             latitude: 45.1660443,
-            longitude: 1.5261588
+            longitude: 1.5261588,
+            address: "",
+            site: "",
+            phone: "",
+            time: ""
         },
         {
             name: "Le Watson",
             type: "bar",
             latitude: 45.1581444,
-            longitude: 1.5328519
+            longitude: 1.5328519,
+            address: "",
+            site: "",
+            phone: "",
+            time: ""
         },
         {
             name: "V And B Brive",
             type: "bar",
             latitude: 45.1496541,
-            longitude: 1.4829608
+            longitude: 1.4829608,
+            address: "",
+            site: "",
+            phone: "",
+            time: ""
         },
+        {
+            name: "Le Banou Bar",
+            type: "us",
+            latitude: 45.164172,
+            longitude: 1.537178,
+            address: "40 quai Tourny - 19100 Brives la Gaillarde",
+            site: "http://www.labanou.com",
+            phone: "06.58.26.98.58",
+            time: "Tout le temps"
+        }
     ],
     credits: [
         {
@@ -148,8 +170,6 @@ module.exports = {
     shop: [
         {
             name: "IPA",
-            size: "",
-            package: "",
             proPrice: "",
             publicPrice: {
                 unit: {
@@ -169,14 +189,11 @@ module.exports = {
                     75: "105.00€"
                 }
             },
-            stock: 100,
             description: "Une Indian Pale Ale houblonnée aux arômes floraux et à l’amertume caractéristique.",
             active: true,
         },
         {
             name: "BLONDE",
-            size: "",
-            package: "",
             proPrice: "",
             publicPrice: {
                 unit: {
@@ -196,14 +213,11 @@ module.exports = {
                     75: "105.00€"
                 }
             },
-            stock: 100,
             description: "Une pale ale classique, désaltérante et légère, aux arômes équilibrés de céréales et de houblons.",
             active: true
         },
         {
             name: "BLANCHE",
-            size: "",
-            package: "",
             proPrice: "",
             publicPrice: {
                 unit: {
@@ -223,14 +237,11 @@ module.exports = {
                     75: "105.00€"
                 }
             },
-            stock: 100,
             description: "La bière d’été par excellence, rafraichissante aux arômes d’agrumes",
             active: true
         },
         {
             name: "ROUSSE",
-            size: "",
-            package: "",
             proPrice: "",
             publicPrice: {
                 unit: {
@@ -250,14 +261,11 @@ module.exports = {
                     75: "105.00€"
                 }
             },
-            stock: 100,
             description: "Une bière à la robe élégante, appréciée des amateurs pour sa finesse et la richesse de ses arômes.",
             active: true
         },
         {
             name: "BRUNE",
-            size: "",
-            package: "",
             proPrice: "",
             publicPrice: {
                 unit: {
@@ -277,14 +285,11 @@ module.exports = {
                     75: "105.00€"
                 }
             },
-            stock: 100,
             description: "Une bière de caractère, réconfortante, aux arômes torréfiés.",
             active: true
         },
         {
             name: "PACK DECOUVERTE",
-            size: "",
-            package: "",
             proPrice: "",
             publicPrice: {
                 unit: {
@@ -304,9 +309,25 @@ module.exports = {
                     75: "28.00€"
                 },
             },
-            stock: 100,
             description: "Découvrez la banou à travers ce pack comprenant:<ul><li>Une Banou Blanche</li><li>Une Banou Blonde</li><li>Une Banou Brune</li><li>Une Banou Rousse</li><li>Une Banou IPA</li><li>La Banou de saison</li></ul>",
             active: true
+        },
+    ],
+    barNews: [
+        {
+            title: "Venez découvrir la bière du moment !",
+            desc: "Ceci est une description de la news",
+            image: "../img/bar.jpg"
+        },
+        {
+            title: "Inauguration du bar avec La Fouine en Concert",
+            desc: "Rendez-vous sur le boulodrome pour le show",
+            image: "../img/fouine.jpg"
+        },
+        {
+            title: "Distribution gratuite de goodies",
+            desc: "Lachés par avions sur tout Brive pendant la journée de dimanche",
+            image: "../img/avion.jpg"
         },
     ]
 };

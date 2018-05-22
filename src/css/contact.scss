@@ -4,10 +4,10 @@
 }
 
 .contactContainer{
-	height: 100%;
-	width: 100%;
-    padding-top: 105px;
-	background-color: white;
+    height: calc(100% - 40px);
+    width: 100%;
+    padding-top: 65px;
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -12,17 +12,12 @@ import "../css/common.scss";
 
 const app = document.getElementById("app");
 ReactDOM.render(
-   <Router history={hashHistory}>
-       <Route path="/" component={Layout}>
-           <IndexRoute component={Fullpage}></IndexRoute>
-           <Route path="boutique" component={Shop}></Route>
-           <Route path="credits" component={Credits}></Route>
-       </Route>
-   </Router>,
-   app
+    <Router history={browserHistory}>
+        <Route path="/" component={Layout}>
+            <IndexRoute component={Fullpage}></IndexRoute>
+            <Route path="boutique" component={Shop}></Route>
+            <Route path="credits" component={Credits}></Route>
+        </Route>
+    </Router>,
+    app
 );
-
-// ReactDOM.render(
-//     <Layout/>,
-//     app
-// );

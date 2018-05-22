@@ -1,4 +1,7 @@
 import React from "react";
+import { Footer } from "./layout.js";
+
+import { Link } from "react-router";
 
 import "../../css/contact.scss";
 
@@ -34,8 +37,8 @@ export class Contact extends React.Component {
     }
 
     render() {
-        return (
-            <div className="contactContainer">
+        return [
+            <div className="contactContainer" key="1">
 
                 <div className="leftColumn">
                     <div className="contactSubtitle">N'hésitez pas à venir nous rendre visite à la microbrasserie! Nous nous ferons un plaisir de vous faire découvrir</div>
@@ -43,7 +46,7 @@ export class Contact extends React.Component {
                 </div>
 
                 <div className="rightColumn">
-                    <div className="pageTitle contactPageTitle">Contactez-nous</div>
+                    <div className="pageTitle contactPageTitle">CONTACTEZ-NOUS</div>
                     <div className="banouPetit">LA BANOU</div>
                     <div className="address">Adresse<br/>Telephone</div>
                     <div className="hoursTitle">Horaires d'ouverture de la microbrasserie:</div>
@@ -57,7 +60,9 @@ export class Contact extends React.Component {
                         <input className="send" type="submit" value="Envoyer" onClick={this.handleSubmit}/>
                     </div>
                 </div>
-            </div>
-        );
+
+            </div>,
+            <Footer key="2"/>
+        ];
     }
 }

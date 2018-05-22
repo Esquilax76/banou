@@ -1,8 +1,9 @@
 import React from "react";
+import { SectionsContainer, ScrollToTopOnMount } from "react-fullpage";
+
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare';
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
-import { SectionsContainer, ScrollToTopOnMount } from "react-fullpage";
 
 import { Beers } from "./beers.js";
 import { Find } from "./find.js";
@@ -12,32 +13,36 @@ import { Contact } from "./contact.js";
 import { Link } from "react-router";
 
 class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+
+        this.selectMenu = this.selectMenu.bind(this);
+    }
+
+    selectMenu(e) {
+        var links = document.getElementsByClassName("navItem");
+        links[e].classList.add("activeMenu");
+    }
+
     render() {
         return (
             <header className="header">
                 <Link to="/" className="headerTitle">LA BANOU</Link>
                 <nav class="nav">
-                    <a href="#bieres" className="navItem hvr-underline-reveal">NOS BIERES</a>
-                    <a href="#lieux" className="navItem hvr-underline-reveal">LES TROUVER</a>
-                    <a href="#histoire" className="navItem hvr-underline-reveal">NOTRE HISTOIRE</a>
-                    <a href="#contact" className="navItem hvr-underline-reveal">CONTACT</a>
+                    <a href="#bieres" className="navItem hvr-underline-reveal activeMenu" onClick={()=> this.selectMenu(0)}>NOS BIERES<div className="line"/></a>
+                    <a href="#bar" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(1)}>BANOUBAR<div className="line"/></a>
+                    <a href="#lieux" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(2)}>POINTS DE VENTE<div className="line"/></a>
+                    <a href="#histoire" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(4)}>NOTRE HISTOIRE<div className="line"/></a>
+                    <a href="#contact" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(5)}>CONTACT<div className="line"/></a>
+                    <Link to="/boutique" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(3)}>BOUTIQUE<div className="line"/></Link>
                 </nav>
             </header>
         );
     }
 }
 
-class HeaderReduced extends React.Component {
-    render() {
-        return (
-            <header className="header">
-                <Link to="/" className="headerTitle">LA BANOU</Link>
-            </header>
-        );
-    }
-}
-
-class Footer extends React.Component {
+export class Footer extends React.Component {
     render() {
         return (
             <footer className="footer">
@@ -60,7 +65,7 @@ class Layout extends React.Component {
     render() {
         let options = {
             activeClass: "active", // the class that is appended to the sections links
-            anchors: ["bieres", "lieux", "histoire", "contact"], // the anchors for each sections
+            anchors: ["bieres", "bar", "lieux", "histoire", "contact"], // the anchors for each sections
             arrowNavigation: true, // use arrow keys
             className: "SectionContainer", // the class name for the section container
             delay: 1000, // the scroll animation speed
@@ -74,9 +79,9 @@ class Layout extends React.Component {
 
         return (
             <main>
-            {this.props.location.pathname === "/" ? ( <Header/> ) : ( <div/> )}
+                {this.props.location.pathname === "/" ? ( <Header/> ) : ( <div/> )}
                 {this.props.children}
-                <Footer/>
+                {/*<Footer/>*/}
             </main>
         );
     }
