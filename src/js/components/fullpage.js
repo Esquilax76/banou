@@ -25,6 +25,10 @@ export class Fullpage extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.onScroll({ activeSection: 0 });
+    }
+
     render() {
         let options = {
             activeClass: "active", // the class that is appended to the sections links

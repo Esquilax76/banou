@@ -128,51 +128,25 @@ select:focus{
 
 @media screen and (max-width: 1600px)
 {	
-	.findDescription{
-		margin-bottom: 15px;
-		font-size: 1em;
-	}
-	.findContainer{
-	    padding-top: 105px;
-	    height: 100%;
+	.selectCityContainer{
+		margin-bottom: 30px;
 	}
 
-	.findPageTitle{
-		margin-top: 30px;
-	}
-
-	.fullHeight{
-		height: 275px;
-	}
-
-	.findSubtitle{
-		margin-bottom: 20px;
-	}
-
-	.legend{
-	    width: 65%;
-	    font-size: 0.9em;
+	.legendImg{
+		height: 35px;
+		margin-right: 10px;
 	}
 
 	.selectCity{
-		margin: 0 0 20px 0;
-	}
-
-	.findSubtitle{
-		font-size: 1.3em;
 		margin-bottom: 20px;
 	}
 
-	.shopButton{
-		font-size: 1.2em;
+	.findLeftColumn {
+		height: calc(100% - 50px);
 	}
 
-	.findImg{
-	    margin-bottom: 15px;
-	}
-
-	.findRightColumn, .findLeftColumn {
-		height: calc(100% - 20px);
+	.findRightColumn {
+		height: calc(100% - 50px);
 	}
 }
 

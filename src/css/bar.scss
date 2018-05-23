@@ -98,3 +98,17 @@ $darkgrey : #202325;
 .greyInfo{
     color: grey;
 }
+
+
+@media screen and (max-width: 1600px)
+{
+    .barNews{
+        top: 55%;
+    }
+
+    .barInfoContainer{
+        height: 70%;
+        margin-bottom: 20%;
+    }
+
+}

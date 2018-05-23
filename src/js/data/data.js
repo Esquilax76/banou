@@ -44,6 +44,15 @@ module.exports = {
             ebc: "44",
             glass: "../../img/verre_brune.png",
             bottle: "../../img/bouteille_brune.png",
+        },
+        {
+            name: "NOEL",
+            description: "Bière brune brassée avec de l’orange, de la cannelle et du gingembre. Une bière forte et ronde aux saveurs de noël : épicée et chaleureuse.",
+            alcool: "6",
+            ibu: "23",
+            ebc: "44",
+            glass: "../../img/verre_noel.png",
+            bottle: "../../img/bouteille_noel.png",
         }
     ],
     story: [

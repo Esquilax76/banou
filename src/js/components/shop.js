@@ -5,6 +5,11 @@ import data from "../data/data.js";
 import { Link } from "react-router";
 import { Footer } from "./layout.js";
 
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import faPlus from '@fortawesome/fontawesome-free-solid/faPlus';
+import faMinus from '@fortawesome/fontawesome-free-solid/faMinus';
+import faTrash from '@fortawesome/fontawesome-free-solid/faTrashAlt';
+
 import "../../css/shop.scss";
 
 export class Shop extends React.Component {
@@ -30,15 +35,16 @@ export class Shop extends React.Component {
         this.addToBasket = this.addToBasket.bind(this);
         this.showBasketMenu = this.showBasketMenu.bind(this);
         this.checkDuplicates = this.checkDuplicates.bind(this);
+        this.modifyQuantity = this.modifyQuantity.bind(this);
     }
 
-    checkDuplicates(price) {
+    checkDuplicates(price, quantity) {
         let item = this.state.duplicates.pop();
         let index = this.state.duplicates.indexOf(item);
         if (index <= -1) {
             this.state.duplicates.push(item);
         } else {
-            this.state.basket[index].quantity++;
+            this.state.basket[index].quantity = parseInt(this.state.basket[index].quantity) + parseInt(quantity);
             this.state.basket[index].price = (parseFloat(this.state.basket[index].price) + parseFloat(price)).toFixed(2) + "€";
             this.state.basket.pop();
         }
@@ -68,13 +74,13 @@ export class Shop extends React.Component {
             details: details,
             quantity: this.state.quantity,
             price: this.getPrice(),
-            //id: this.state.currentChoice.name + " - " + details
+            id: this.state.currentChoice.name + " - " + details
         };
 
         this.state.duplicates.push(this.state.currentChoice.name + " - " + details);
         basket.push(newItem);
         this.setState({ basket: basket, basketAnimation: "25%" });
-        this.checkDuplicates(this.getPrice());
+        this.checkDuplicates(this.getPrice(), newItem.quantity);
         this.hidePopUp();
         this.showBasketMenu();
     }
@@ -134,6 +140,27 @@ export class Shop extends React.Component {
 
     hideBasketMenu() {
         this.setState({ basketVisibility: "hidden", basketAnimation: "0" });
+    }
+
+    modifyQuantity(index, action) {
+        let basket = this.state.basket;
+        let item = basket[index];
+        let unitPrice = (parseFloat(item.price) / item.quantity).toFixed(2);
+        console.log(unitPrice);
+        if (action === "plus") {
+            item.quantity++;
+            item.price = (parseFloat(item.price) + parseFloat(unitPrice)).toFixed(2) + "€";
+        } else if (action === "less" && item.quantity > 1) {
+            item.quantity--;
+            item.price = (parseFloat(item.price) - parseFloat(unitPrice)).toFixed(2) + "€";
+        } else if (action === "delete") {
+            let duplicates = this.state.duplicates;
+            let findDuplicate = duplicates.indexOf(item.id);
+            duplicates.splice(findDuplicate, 1);
+            basket.splice(index, 1);
+            this.setState({ duplicates: duplicates });
+        }
+        this.setState({ basket: basket });
     }
 
     render() {
@@ -221,7 +248,7 @@ export class Shop extends React.Component {
                 </div>
             </div>,
             <div className="disable" style={{ visibility: this.state.basketVisibility }} key={"basketMenu"} onClick={() => this.hideBasketMenu()}>
-                <div className="basketMenu" style={{ width: this.state.basketAnimation }}>
+                <div className="basketMenu" style={{ width: this.state.basketAnimation }} onClick={(e) => e.stopPropagation()}>
                     <div className="basketMenuHeader">PANIER</div>
                     <div className="basketMenuContent">
                         {this.state.basket.length === 0 &&
@@ -236,7 +263,20 @@ export class Shop extends React.Component {
                                             <div className="basketItemTitle">{item.name}</div>
                                             <div className="basketItemInfo">{item.details}</div>
                                             <div className="basketItemInfo">{"QUANTITE : " + item.quantity}</div>
-                                            <div className="basketItemInfo">{item.price}</div>
+                                            <div className="basketQuantity">
+                                                <div className="basketItemInfo">{item.price}</div>
+                                                <div className="basketQuantityButtons">
+                                                    <div className="basketQuantityButton" onClick={() => this.modifyQuantity(index, "plus")}>
+                                                        <FontAwesomeIcon icon={faPlus}/>
+                                                    </div>
+                                                    <div className={"basketQuantityButton " + ((item.quantity == 1) ? "disableButton" : "") } onClick={() => this.modifyQuantity(index, "less")}>
+                                                        <FontAwesomeIcon icon={faMinus}/>
+                                                    </div>
+                                                    <div className="basketQuantityButton" onClick={() => this.modifyQuantity(index, "delete")}>
+                                                        <FontAwesomeIcon icon={faTrash}/>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 );

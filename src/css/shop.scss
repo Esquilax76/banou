@@ -238,6 +238,7 @@ $greygreen : #A6BFBF;
 	align-items: flex-start;
 	padding: 0 0 0 10px;
 	justify-content: space-between;
+	width: 100%;
 }
 
 .basketItemTitle{
@@ -281,4 +282,33 @@ $greygreen : #A6BFBF;
 	display: flex;
     align-items: center;
     justify-content: space-around
+}
+
+.basketQuantity{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.basketQuantityButtons{
+	display: flex;
+	align-items: center;
+}
+
+.basketQuantityButton{
+	background-color: $darkgrey;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.disableButton{
+	background-color: grey;
 }

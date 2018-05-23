@@ -8,7 +8,7 @@ export class Beers extends React.Component {
         super(props);
         this.state = {
             opacity: 0,
-            positions: ["calc(50% - 500px)", "calc(50% - 300px)", "calc(50% - 100px)", "calc(50% + 100px)", "calc(50% + 300px)"],
+            positions: ["calc(50% - 600px)", "calc(50% - 400px)", "calc(50% - 200px)", "calc(50%)", "calc(50% + 200px)", "calc(50% + 400px)"],
             active: data.beers[0],
             details: 0,
             beers: data.beers,
@@ -34,7 +34,7 @@ export class Beers extends React.Component {
             space = 55;
         }
         let newPositions = this.state.positions;
-        const left = [-500, -300, -100, 100, 300];
+        const left = [-600, -400, -200, 0, 200, 400];
         let newDetails = "calc(50% + " + (left[v] + space) + "px)";
         newPositions.forEach(function (value, i) {
             if (i > v) {
@@ -48,7 +48,7 @@ export class Beers extends React.Component {
     }
 
     hideDetails() {
-        this.setState({ positions: ["calc(50% - 500px)", "calc(50% - 300px)", "calc(50% - 100px)", "calc(50% + 100px)", "calc(50% + 300px)"], opacity: 0 });
+        this.setState({ positions: ["calc(50% - 600px)", "calc(50% - 400px)", "calc(50% - 200px)", "calc(50%)", "calc(50% + 200px)", "calc(50% + 400px)"], opacity: 0 });
     }
 
     render() {

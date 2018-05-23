@@ -16,13 +16,6 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-
-        this.selectMenu = this.selectMenu.bind(this);
-    }
-
-    selectMenu(e) {
-        var links = document.getElementsByClassName("navItem");
-        links[e].classList.add("activeMenu");
     }
 
     render() {
@@ -30,12 +23,12 @@ class Header extends React.Component {
             <header className="header">
                 <Link to="/" className="headerTitle">LA BANOU</Link>
                 <nav class="nav">
-                    <a href="#bieres" className="navItem hvr-underline-reveal activeMenu" onClick={()=> this.selectMenu(0)}>NOS BIERES<div className="line"/></a>
-                    <a href="#bar" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(1)}>BANOUBAR<div className="line"/></a>
-                    <a href="#lieux" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(2)}>POINTS DE VENTE<div className="line"/></a>
-                    <a href="#histoire" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(4)}>NOTRE HISTOIRE<div className="line"/></a>
-                    <a href="#contact" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(5)}>CONTACT<div className="line"/></a>
-                    <Link to="/boutique" className="navItem hvr-underline-reveal" onClick={()=> this.selectMenu(3)}>BOUTIQUE<div className="line"/></Link>
+                    <a href="#bieres" className="navItem hvr-underline-reveal activeMenu">NOS BIERES<div className="line"/></a>
+                    <a href="#bar" className="navItem hvr-underline-reveal">BANOUBAR<div className="line"/></a>
+                    <a href="#lieux" className="navItem hvr-underline-reveal">POINTS DE VENTE<div className="line"/></a>
+                    <a href="#histoire" className="navItem hvr-underline-reveal">NOTRE HISTOIRE<div className="line"/></a>
+                    <a href="#contact" className="navItem hvr-underline-reveal">CONTACT<div className="line"/></a>
+                    <Link to="/boutique" className="navItem hvr-underline-reveal">BOUTIQUE<div className="line"/></Link>
                 </nav>
             </header>
         );
