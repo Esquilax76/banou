@@ -6,8 +6,8 @@ module.exports = {
             alcool: "4.8",
             ibu: "30",
             ebc: "8",
-            glass: "../../img/home/verre_blanche.png",
-            bottle: "../../img/home/bouteille_blanche.png",
+            glass: require("../../img/home/verre_blanche.png"),
+            bottle: require("../../img/home/bouteille_blanche.png"),
             color: "white"
         },
         {
@@ -16,8 +16,8 @@ module.exports = {
             alcool: "7",
             ibu: "70",
             ebc: "18",
-            glass: "../../img/home/verre_ipa.png",
-            bottle: "../../img/home/bouteille_ipa.png",
+            glass: require("../../img/home/verre_ipa.png"),
+            bottle: require("../../img/home/bouteille_ipa.png"),
             color: "white"
         },
         {
@@ -26,8 +26,8 @@ module.exports = {
             alcool: "5",
             ibu: "35",
             ebc: "14",
-            glass: "../../img/home/verre_blonde.png",
-            bottle: "../../img/home/bouteille_blonde.png",
+            glass: require("../../img/home/verre_blonde.png"),
+            bottle: require("../../img/home/bouteille_blonde.png"),
             color: "#571e04"
         },
         {
@@ -36,8 +36,8 @@ module.exports = {
             alcool: "7",
             ibu: "50",
             ebc: "28",
-            glass: "../../img/home/verre_rousse.png",
-            bottle: "../../img/home/bouteille_rousse.png",
+            glass: require("../../img/home/verre_rousse.png"),
+            bottle: require("../../img/home/bouteille_rousse.png"),
             color: "white"
         },
         {
@@ -46,8 +46,8 @@ module.exports = {
             alcool: "6",
             ibu: "23",
             ebc: "44",
-            glass: "../../img/home/verre_brune.png",
-            bottle: "../../img/home/bouteille_brune.png",
+            glass: require("../../img/home/verre_brune.png"),
+            bottle: require("../../img/home/bouteille_brune.png"),
             color: "white"
         },
         {
@@ -56,30 +56,30 @@ module.exports = {
             alcool: "4",
             ibu: "19",
             ebc: "35",
-            glass: "../../img/home/verre_session_ipa.png",
-            bottle: "../../img/home/bouteille_session_ipa.png",
+            glass: require("../../img/home/verre_session_ipa.png"),
+            bottle: require("../../img/home/bouteille_session_ipa.png"),
             color: "#571e04"
         }
     ],
     story: [
         {
             title: "DECOUVERTE DE LA BIERE ARTISANALE",
-            picture: "../../img/story/story1.jpg",
+            picture: require("../../img/story/story1.jpg"),
             description: "L’histoire de La Banou commence en septembre 2014 au Canada, où nous découvrons la culture de la bière artisanale au travers des innombrables microbrasseries québécoises. Alors que nous parcourons la Gaspésie, l’idée nous apparaît comme une évidence: nous ouvrirons un jour une microbrasserie sur un territoire qui nous est cher : la Corrèze.",
         },
         {
             title: "NOS DEBUTS DE BRASSEURS",
-            picture: "../../img/story/story2.jpg",
+            picture: require("../../img/story/story2.jpg"),
             description: "Une fois rentrés en France, nous nous initions donc au brassage dans notre petit appartement parisien. Dès que possible, nous essayons de brasser dans la maison familiale en Corrèze afin de tester nos recettes avec l’eau corrézienne. En parallèle, nous travaillons chacun de notre côté en tant qu’ingénieur afin de mettre de l’argent de côté, tout en nous laissant du temps pour affiner le projet.",
         },
         {
             title: "UNE PASSION QUI S'ENRICHIE",
-            picture: "../../img/story/story3.jpg",
+            picture: require("../../img/story/story3.jpg"),
             description: "Le projet se précise peu à peu. Nous travaillons sur le business plan et la conception de la brasserie. Nous rencontrons également beaucoup de brasseurs français et internationaux, afin de recueillir de précieux conseils, d’échanger sur notre projet et de nous former au brassage à plus grande échelle.",
         },
         {
             title: "NAISSANCE DE LA BANOU",
-            picture: "../../img/story/story4.jpg",
+            picture: require("../../img/story/story4.jpg"),
             description: "La Banou prendra officiellement vit en décembre 2018. Nous quitterons alors nos emplois respectifs afin de nous installer à Brive la Gaillarde pour nous lancer à plein temps dans la création et la mise en place de la brasserie. Cela pourra prendre un peu de temps, mais nous ferons notre maximum pour que vous puissiez dégustez la Banou le plus tôt possible !",
         },
     ],
@@ -332,12 +332,12 @@ module.exports = {
         {
             title: "Notre business plan est prêt !",
             desc: "Première grande étape du projet finalisée. Notre business plan est enfin fini, et nous pouvons commencer les démarches de financement... le crowdfounding arrive bientôt !",
-            image: "../img/news/business.jpg"
+            image: require("../../img/news/business.jpg")
         },
         {
             title: "Découvrez la Session IPA !",
             desc: "La recette de notre bière de saison est prête. Une session IPA légère et désaltérante aux arômes d'agrumes. La bière idéale pour les fortes chaleurs !",
-            image: "../img/news/session.jpg"
+            image: require("../../img/news/session.jpg")
         },
     ]
 };
