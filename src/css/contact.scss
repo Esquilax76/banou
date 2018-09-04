@@ -61,6 +61,7 @@
 	margin-top: 10px;
 	font-size: 1.2em;
 	text-align: center;
+	font-style: italic;
 }
 
 .hoursTitle {
@@ -122,7 +123,7 @@
 	width: 100%;
 	height: 4em;
 	color: white;
-
+	cursor: pointer;
 }
 
 input:focus, textarea:focus {

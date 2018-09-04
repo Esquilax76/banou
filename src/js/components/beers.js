@@ -12,7 +12,7 @@ export class Beers extends React.Component {
             active: data.beers[0],
             details: 0,
             beers: data.beers,
-            current: {position: 0, name: "IPA"}
+            current: { position: 0, name: "IPA" }
         };
         this.showDetails = this.showDetails.bind(this);
         this.hideDetails = this.hideDetails.bind(this);
@@ -44,7 +44,7 @@ export class Beers extends React.Component {
             }
         });
         this.findBeer(name);
-        this.setState({ positions: newPositions, opacity: 1, details: newDetails, current: {position: v, name: name} });
+        this.setState({ positions: newPositions, opacity: 1, details: newDetails, current: { position: v, name: name } });
     }
 
     hideDetails() {
@@ -73,17 +73,17 @@ export class Beers extends React.Component {
                         style={{ left: this.state.details, opacity: this.state.opacity, backgroundImage: `url(${this.state.active.glass})` }}
                     >
                         <div className="desc">
-                            <div className="descTitle">{this.state.active.name}</div>
-                            <div className="descText">{this.state.active.description}</div>
-                            <div className="descAlcool">
+                            <div className="descTitle" style={{ color: this.state.active.color }}>{this.state.active.name}</div>
+                            <div className="descText" style={{ color: this.state.active.color }}>{this.state.active.description}</div>
+                            <div className="descAlcool" style={{ color: this.state.active.color, borderBottom: "1px solid " + this.state.active.color  }}>
                                 <div className="little">ALCOOL</div>
                                 <div className="value">{this.state.active.alcool} <span className="unit">%/VOL</span></div>
                             </div>
-                            <div className="descIbu">
+                            <div className="descIbu" style={{ color: this.state.active.color, borderBottom: "1px solid " + this.state.active.color }} >
                                 <div className="little">AMERTUME</div>
                                 <div className="value">{this.state.active.ibu} <span className="unit">IBU</span></div>
                             </div>
-                            <div className="descSRM">
+                            <div className="descSRM" style={{ color: this.state.active.color }}>
                                 <div className="little">COULEUR</div>
                                 <div className="value">{this.state.active.ebc} <span className="unit">EBC</span></div>
                             </div>

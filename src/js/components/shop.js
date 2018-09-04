@@ -69,7 +69,7 @@ export class Shop extends React.Component {
             details = this.state.size + "cl - " + corres[this.state.package];
         }
         let newItem = {
-            image: "../../img/" + this.state.currentChoice.name.replace(/\s+/g, "_").toLowerCase() + "_" + this.state.package + ".jpg",
+            image: "../../img/shop/" + this.state.currentChoice.name.replace(/\s+/g, "_").toLowerCase() + "_" + this.state.package + ".jpg",
             name: this.state.currentChoice.name,
             details: details,
             quantity: this.state.quantity,
@@ -146,7 +146,6 @@ export class Shop extends React.Component {
         let basket = this.state.basket;
         let item = basket[index];
         let unitPrice = (parseFloat(item.price) / item.quantity).toFixed(2);
-        console.log(unitPrice);
         if (action === "plus") {
             item.quantity++;
             item.price = (parseFloat(item.price) + parseFloat(unitPrice)).toFixed(2) + "€";
@@ -164,7 +163,7 @@ export class Shop extends React.Component {
     }
 
     render() {
-        let image = "../../img/" + this.state.currentChoice.name.replace(/\s+/g, "_").toLowerCase() + "_" + this.state.package + ".jpg";
+        let image = "../../img/shop/" + this.state.currentChoice.name.replace(/\s+/g, "_").toLowerCase() + "_" + this.state.package + ".jpg";
         return [
             <header className="header" key={"header"}>
                 <Link to="/" className="headerTitle">LA BANOU</Link>
@@ -174,9 +173,11 @@ export class Shop extends React.Component {
                 <div className="pageTitle shopTitle">Commandez vos bières en ligne !</div>
                 <div className="shopItems">
                     {this.state.products.map(function (item, index) {
-                        let source = "../../img/" + item.name.replace(/\s+/g, "_").toLowerCase() + "_unit.jpg";
+                        let source = "../../img/shop/" + item.name.replace(/\s+/g, "_").toLowerCase() + "_unit.jpg";
                         return (
-                            <div className="shopItem" key={index} onClick={() => this.showPopUp(item)}>
+                            /*<div className="shopItem" key={index} onClick={() => this.showPopUp(item)}>*/
+                            <div className="shopItem" key={index}>
+                                <div className="shopItemDisabled">Article momentanément indisponible</div>
                                 <img className="shopItemImage" src={source}/>
                                 <div className="shopItemTitle">{item.name}</div>
                                 <div className="shopItemPrice">{item.publicPrice[this.state.package][this.state.size]}</div>

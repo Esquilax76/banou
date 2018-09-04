@@ -33,6 +33,7 @@ $greygreen : #A6BFBF;
 	background-color: $darkgrey;
 	cursor: pointer;
     transition: 0.3s;
+    position: relative;
 }
 
 .shopItem:hover{
@@ -53,6 +54,21 @@ $greygreen : #A6BFBF;
 	font-size: 0.8em;
 	padding: 10px 0 10px 10px;
 	color: #6E6968;
+}
+
+.shopItemDisabled{
+	background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .disable{

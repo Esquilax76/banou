@@ -1,6 +1,6 @@
 import React from "react";
 import { withGoogleMap, withScriptjs, GoogleMap, Marker, InfoWindow } from "react-google-maps";
-import { compose, withProps, withStateHandlers } from "recompose"
+import { compose, withProps, withStateHandlers } from "recompose";
 
 import "../../css/find.scss";
 import data from "../data/data.js";
@@ -13,13 +13,12 @@ import faFacebookGlobe from '@fortawesome/fontawesome-free-solid/faGlobe';
 import faFacebookPhone from '@fortawesome/fontawesome-free-solid/faPhone';
 import faFacebookClock from '@fortawesome/fontawesome-free-solid/faClock';
 
-import cuve from "../../img/cuve.jpg";
-import pictoBiere from "../../img/pictoBiere.png";
-import pictoPinte from "../../img/pictoPinte.png";
-import pictoMicrob from "../../img/pictoMicrob.png";
+import pictoBiere from "../../img/find/pictoBiere.png";
+import pictoPinte from "../../img/find/pictoPinte.png";
+import pictoMicrob from "../../img/find/pictoMicrob.png";
 
-import markerBiere from "../../img/markerBiere.png";
-import markerPinte from "../../img/markerPinte.png";
+import markerBiere from "../../img/find/markerBiere.png";
+import markerPinte from "../../img/find/markerPinte.png";
 
 const mapStyle = [{"featureType": "administrative.land_parcel","stylers": [{"visibility": "off"}]},{"featureType": "administrative.neighborhood","stylers": [{"visibility": "off"}]},{"featureType": "poi","stylers": [{"visibility": "off"}]},{"featureType": "road","elementType": "labels.icon","stylers": [{  "visibility": "off"}]},]
 
