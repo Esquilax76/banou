@@ -206,6 +206,7 @@ module.exports = {
             },
             description: "Une Indian Pale Ale houblonnée aux arômes floraux et à l’amertume caractéristique.",
             active: true,
+            image: require("../../img/shop/ipa_unit.jpg")
         },
         {
             name: "BLONDE",
@@ -229,7 +230,8 @@ module.exports = {
                 }
             },
             description: "Une pale ale classique, désaltérante et légère, aux arômes équilibrés de céréales et de houblons.",
-            active: true
+            active: true,
+            image: require("../../img/shop/blonde_unit.jpg")
         },
         {
             name: "BLANCHE",
@@ -253,7 +255,8 @@ module.exports = {
                 }
             },
             description: "La bière d’été par excellence, rafraichissante aux arômes d’agrumes",
-            active: true
+            active: true,
+            image: require("../../img/shop/blanche_unit.jpg")
         },
         {
             name: "ROUSSE",
@@ -277,7 +280,8 @@ module.exports = {
                 }
             },
             description: "Une bière à la robe élégante, appréciée des amateurs pour sa finesse et la richesse de ses arômes.",
-            active: true
+            active: true,
+            image: require("../../img/shop/rousse_unit.jpg")
         },
         {
             name: "BRUNE",
@@ -301,7 +305,8 @@ module.exports = {
                 }
             },
             description: "Une bière de caractère, réconfortante, aux arômes torréfiés.",
-            active: true
+            active: true,
+            image: require("../../img/shop/brune_unit.jpg")
         },
         {
             name: "PACK DECOUVERTE",
@@ -325,7 +330,8 @@ module.exports = {
                 },
             },
             description: "Découvrez la banou à travers ce pack comprenant:<ul><li>Une Banou Blanche</li><li>Une Banou Blonde</li><li>Une Banou Brune</li><li>Une Banou Rousse</li><li>Une Banou IPA</li><li>La Banou de saison</li></ul>",
-            active: true
+            active: true,
+            image: require("../../img/shop/pack_decouverte_unit.jpg")
         },
     ],
     barNews: [

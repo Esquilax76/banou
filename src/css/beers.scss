@@ -143,3 +143,15 @@ $darkgrey : #202325;
 		height: calc(100% - 30px);
 	}
 }
+
+@media screen and (max-width: 1450px)
+{
+        .desc{
+                margin-top: 150px;
+
+        }
+        .descText{
+                font-size: 0.8em;
+                margin-bottom: 10px;
+        }
+}

@@ -173,12 +173,12 @@ export class Shop extends React.Component {
                 <div className="pageTitle shopTitle">Commandez vos bières en ligne !</div>
                 <div className="shopItems">
                     {this.state.products.map(function (item, index) {
-                        let source = "../../img/shop/" + item.name.replace(/\s+/g, "_").toLowerCase() + "_unit.jpg";
+                        //let source = "../../img/shop/" + item.name.replace(/\s+/g, "_").toLowerCase() + "_unit.jpg";
                         return (
                             /*<div className="shopItem" key={index} onClick={() => this.showPopUp(item)}>*/
                             <div className="shopItem" key={index}>
                                 <div className="shopItemDisabled">Article momentanément indisponible</div>
-                                <img className="shopItemImage" src={source}/>
+                                <img className="shopItemImage" src={item.image}/>
                                 <div className="shopItemTitle">{item.name}</div>
                                 <div className="shopItemPrice">{item.publicPrice[this.state.package][this.state.size]}</div>
                             </div>
