@@ -287,7 +287,7 @@ export class Shop extends React.Component {
                             <div className="basketTotal">
                                 Total : {this.getBasketTotal()} €
                             </div>
-                            <Link to="/basket" className="basketButton">Passer au payement</Link>
+                            <Link to="/basket" className="basketButton">Passer au paiement</Link>
                         </div>
                     </div>
                 </div>
