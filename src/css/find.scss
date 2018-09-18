@@ -5,7 +5,7 @@ $darkdarkgreygreen : #283333;
 $mediumgreygreen : #4A6161;
 
 .findContainer{
-	height: calc(100% - 50px);
+	height: 100%;
 	width: 100%;
     padding-top: 115px; //Header 65 + Footer 40 + padding 50
 	background-color: $darkgreygreen;
@@ -69,7 +69,7 @@ $mediumgreygreen : #4A6161;
 .legend{
 	display: flex;
 	align-items: center;
-	float: left;
+	//float: left;
 	justify-self: flex-start;
     width: 100%;
     margin-bottom: 20px; 

@@ -1,5 +1,8 @@
 import React from "react";
 
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { faClock, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+
 import "../../css/bar.scss";
 import data from "../data/data.js";
 
@@ -43,16 +46,18 @@ export class Bar extends React.Component {
                 <div className="barContent">
                     <div className="pageTitle barTitle">LE BANOUBAR</div>
                     <div className="barInfoContainer">
-                        <div className="barInfo bigInfo">
+                        <div className="barInfo bigInfo" style={{ display: "table" }}>
                             Venez découvrir notre Brew pub au sein même de notre microbrasserie!
                             <br/><br/>
-                            Un lieu chaleureux et convivial, où vous pourrrez dégustez les bières La BANOU, tout en faisant une partie de flechette ou de babyfoot!
+                            Un lieu chaleureux et convivial, où vous pourrrez déguster les bières La BANOU, tout en faisant une partie de fléchettes ou de babyfoot!
                         </div>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} style={{ fontSize: "40px", margin: "60px 0 20px 0", color: "grey" }}/>
                         <div className="barInfo greyInfo">
                             Recherche d'un local en cours
                             <br/><br/>
                             06 58 26 98 58
                         </div>
+                        <FontAwesomeIcon icon={faClock} style={{ fontSize: "40px", margin: "60px 0 20px 0" }}/>
                         <div className="barInfo">
                             <strong>Horaires d'ouverture du BANOU BAR</strong>
                             <br/><br/>
@@ -60,7 +65,7 @@ export class Bar extends React.Component {
                             <br/>
                             Le vendredi et le samedi de 12h à 22h
                             <br/>
-                            Brunch le dimanche matin de 12h à 15h
+                            Brunch le dimanche de 12h à 15h
                         </div>
                     </div>
                 </div>

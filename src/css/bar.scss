@@ -65,7 +65,9 @@ $darkgrey : #202325;
     position: relative;
     top: calc(100% - 40px);
     left: calc(50% - 100px);
-    width: fit-content;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
 }
 
 .barNewsButton{
@@ -87,8 +89,9 @@ $darkgrey : #202325;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    height: 60%;
     margin-bottom: 30%;
+    margin-top: 10%;
+    width: 100%;
 }
 
 .bigInfo{

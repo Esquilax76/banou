@@ -10,6 +10,8 @@ import Layout from "./components/layout.js";
 
 import "../css/common.scss";
 
+require("../img/favicon.png");
+
 const app = document.getElementById("app");
 ReactDOM.render(
     <Router history={browserHistory}>

@@ -52,7 +52,7 @@ module.exports = {
         },
         {
             name: "SESSION IPA",
-            description: "Une bière rafraîchissante et légère, aux notes d’agrumes et de fruits tropicaux apportés par ses quatre houblons.",
+            description: "Une bière rafraîchissante et légère, aux notes d’agrumes et de fruits tropicaux apportés par ses houblons.",
             alcool: "4",
             ibu: "19",
             ebc: "35",
@@ -80,7 +80,7 @@ module.exports = {
         {
             title: "NAISSANCE DE LA BANOU",
             picture: require("../../img/story/story4.jpg"),
-            description: "La Banou prendra officiellement vie en décembre 2018. Nous quitterons alors nos emplois respectifs afin de nous installer à Brive la Gaillarde pour nous lancer à plein temps dans la création et la mise en place de la brasserie. Cela pourra prendre un peu de temps, mais nous ferons notre maximum pour que vous puissiez déguster la Banou le plus tôt possible !",
+            description: "La Banou prendra officiellement vie en décembre 2018. Nous quitterons alors nos emplois respectifs afin de nous installer à Brive-la-Gaillarde pour nous lancer à plein temps dans la création et la mise en place de la brasserie. Cela pourra prendre un peu de temps, mais nous ferons notre maximum pour que vous puissiez déguster la Banou le plus tôt possible !",
         },
     ],
     find: [

@@ -74,7 +74,7 @@ export class Beers extends React.Component {
                     >
                         <div className="desc">
                             <div className="descTitle" style={{ color: this.state.active.color }}>{this.state.active.name}</div>
-                            <div className="descText" style={{ color: this.state.active.color }}>{this.state.active.description}</div>
+                            <div className="descText" style={{ color: this.state.active.color, display: "table" }}>{this.state.active.description}</div>
                             <div className="descAlcool" style={{ color: this.state.active.color, borderBottom: "1px solid " + this.state.active.color  }}>
                                 <div className="little">ALCOOL</div>
                                 <div className="value">{this.state.active.alcool} <span className="unit">%/VOL</span></div>

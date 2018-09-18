@@ -1,5 +1,4 @@
 import React from "react";
-import { SectionsContainer, ScrollToTopOnMount } from "react-fullpage";
 
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare';
@@ -18,6 +17,18 @@ class Header extends React.Component {
         this.state = {};
     }
 
+    isIE() {
+        var ua = navigator.userAgent;
+        var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+        return is_ie;
+    }
+
+    componentDidMount() {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = "/mobile";
+        }
+    }
+
     render() {
         return (
             <header className="header">
@@ -28,7 +39,7 @@ class Header extends React.Component {
                     <a href="#lieux" className="navItem hvr-underline-reveal">POINTS DE VENTE<div className="line"/></a>
                     <a href="#histoire" className="navItem hvr-underline-reveal">NOTRE HISTOIRE<div className="line"/></a>
                     <a href="#contact" className="navItem hvr-underline-reveal">CONTACT<div className="line"/></a>
-                    <Link to="/boutique" className="navItem hvr-underline-reveal">BOUTIQUE<div className="line"/></Link>
+                    <Link to="/boutique"className="navItem hvr-underline-reveal" style={{ visibility: this.isIE() ? "hidden" : "visible" }}>BOUTIQUE<div className="line"/></Link>
                 </nav>
             </header>
         );

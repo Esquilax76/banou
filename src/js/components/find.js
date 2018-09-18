@@ -102,7 +102,7 @@ export class Find extends React.Component {
                             lat={this.state.lat}
                             lng={this.state.lng}
                             isOpen={-1}
-                            loadingElement={<div style={{ height: `100%` }} />}
+                            loadingElement={<div style={{ height: "100%" }} />}
                             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBpQuWaLLHJrTvR_vwPAKKXFzDGt0__NB8&libraries=places&language=fr"
                         />
                     </div>
@@ -119,11 +119,11 @@ export class Find extends React.Component {
                             </select>
                             <div className="legend">
                                 <img src={pictoBiere} className="legendImg"/>
-                                <div className="legendText">Les bars où vous pourrez dégustez la Banou</div>
+                                <div className="legendText">Les bars où vous pourrez déguster la Banou</div>
                             </div>
                             <div className="legend">
                                 <img src={pictoPinte} className="legendImg"/>
-                                <div className="legendText">Les magasins et caves où vous pourrez en achetez</div>
+                                <div className="legendText">Les magasins et caves où vous pourrez en acheter</div>
                             </div>
                             <div className="legend">
                                 <img src={pictoMicrob} className="legendImg"/>
@@ -132,7 +132,7 @@ export class Find extends React.Component {
                         </div>
                         <div className="legendInfos">
                             <div className="legendInfo">Vous êtes loin de nos points de vente ?</div>
-                            <div className="legendInfo">Commandez en ligne et faites vous livrer directement chez vous !</div>
+                            <div className="legendInfo" style={{ width: "80%" }}>Commandez en ligne et faites vous livrer directement chez vous !</div>
                             <Link to="/boutique" className="hvr-sweep-to-right">Boutique en ligne</Link>
                         </div>
                     </div>

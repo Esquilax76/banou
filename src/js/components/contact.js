@@ -40,7 +40,7 @@ export class Contact extends React.Component {
                             <input className="input smallInput" value={this.state.name} name="name" type="text" placeholder="Nom" onChange={(e) => this.handleChange(e, "name")}/>
                             <input className="input smallInput" value={this.state.email} type="email" name="email" placeholder="Email" onChange={(e) => this.handleChange(e, "email")}/>
                         </div>
-                        <textarea rows="10" className="message" value={this.state.message} placeholder="Message" name="message" onChange={(e) => this.handleChange(e, "message")}/>
+                        <textarea rows="8" className="message" value={this.state.message} placeholder="Message" name="message" onChange={(e) => this.handleChange(e, "message")}/>
                         <input className="send" type="submit" value="Envoyer" onClick={this.handleSubmit}/>
                     </div>
                 </form>
