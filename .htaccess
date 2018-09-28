@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_USER_AGENT} "ipod|iphone|ipad|android|palm|googlebot-mobile" [NC]
+RewriteRule (.*) http://www.labanou.com/mobile/ [R=301,L]

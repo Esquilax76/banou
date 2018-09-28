@@ -57,7 +57,7 @@ $darkgrey : #202325;
 }
 
 .desc{
-	margin-top: 220px;
+	margin-top: 235px;
 	display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +71,7 @@ $darkgrey : #202325;
 	font-family: titleFont;
 	font-size: 1.5em;
 	margin-bottom: 15px;
+	width: 225px;
 }
 
 .descText{
@@ -100,7 +101,7 @@ $darkgrey : #202325;
 }
 
 .unit{
-	font-size: 0.4em;
+	font-size: 0.5em;
 	font-weight: normal;
 }
 
@@ -108,7 +109,7 @@ $darkgrey : #202325;
 @media screen and (max-width: 1600px)
 {
 	.desc{
-		margin-top: 175px;
+		margin-top: 195px;
 	    padding: 0 25% 0 25%;
 	}
 
@@ -140,18 +141,19 @@ $darkgrey : #202325;
 
 	.beersContainer{
 		padding-top: 30px;
-		height: calc(100% - 30px);
+		height: calc(100% - 50px);
 	}
 }
 
 @media screen and (max-width: 1450px)
 {
-        .desc{
-                margin-top: 150px;
+    .desc{
+            margin-top: 175px;
 
-        }
-        .descText{
-                font-size: 0.8em;
-                margin-bottom: 10px;
-        }
+    }
+
+    .descText{
+            font-size: 0.8em;
+            margin-bottom: 10px;
+    }
 }

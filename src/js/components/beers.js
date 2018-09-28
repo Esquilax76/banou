@@ -61,7 +61,7 @@ export class Beers extends React.Component {
                             <div
                                 key={index}
                                 onMouseEnter={() => this.showDetails(index, item.name)}
-                                onMouseLeave={this.hideDetails}
+                                //onMouseLeave={this.hideDetails}
                                 className="bottle"
                                 style={{ backgroundImage: "url(" + item.bottle + ")", left: this.state.positions[index] }}
                             />

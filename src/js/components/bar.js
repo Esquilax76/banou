@@ -51,19 +51,19 @@ export class Bar extends React.Component {
                             <br/><br/>
                             Un lieu chaleureux et convivial, où vous pourrrez déguster les bières La BANOU, tout en faisant une partie de fléchettes ou de babyfoot!
                         </div>
-                        <FontAwesomeIcon icon={faMapMarkerAlt} style={{ fontSize: "40px", margin: "60px 0 20px 0", color: "grey" }}/>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} style={{ color: "grey" }} className="infoIcon"/>
                         <div className="barInfo greyInfo">
                             Recherche d'un local en cours
                             <br/><br/>
                             06 58 26 98 58
                         </div>
-                        <FontAwesomeIcon icon={faClock} style={{ fontSize: "40px", margin: "60px 0 20px 0" }}/>
+                        <FontAwesomeIcon icon={faClock} className="infoIcon"/>
                         <div className="barInfo">
                             <strong>Horaires d'ouverture du BANOU BAR</strong>
                             <br/><br/>
                             Du mardi au jeudi de 16h à 20h
                             <br/>
-                            Le vendredi et le samedi de 12h à 22h
+                            Le vendredi et le samedi de 16h à 22h
                             <br/>
                             Brunch le dimanche de 12h à 15h
                         </div>

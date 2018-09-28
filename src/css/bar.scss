@@ -102,16 +102,30 @@ $darkgrey : #202325;
     color: grey;
 }
 
+.infoIcon{
+    font-size: 40px;
+    margin: 60px 0 20px 0;
+}
+
 
 @media screen and (max-width: 1600px)
 {
     .barNews{
-        top: 60%;
+        top: 53%;
+    }
+
+    .infoIcon{
+        font-size: 30px;
+        margin: 30px 0 10px 0;
+    }
+
+    .barNewsNav{
+        top: calc(100% - 115px);
     }
 
     .barInfoContainer{
-        height: 70%;
-        margin-bottom: 20%;
+        margin-bottom: 15%;
+        margin-top: 5%;
     }
 
 }

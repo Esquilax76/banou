@@ -23,12 +23,6 @@ class Header extends React.Component {
         return is_ie;
     }
 
-    componentDidMount() {
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            window.location.href = "/mobile";
-        }
-    }
-
     render() {
         return (
             <header className="header">
