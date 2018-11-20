@@ -34,7 +34,7 @@ export class Contact extends React.Component {
                     <div className="banouPetit">LA BANOU</div>
                     <div className="address">Recherche d'un local en cours</div><div>06.58.26.98.58</div>
                     <div className="hoursTitle">Horaires d'ouverture de la microbrasserie:</div>
-                    <div className="hours">Du lundi au vendredi, de 9h à 18h<br/>Visite le samedi de 10h à 16h</div>
+                    <div className="hours">Du mardi au samedi, de 16h à 20h<br/>Visite le samedi de 10h à 16h</div>
                     <div className="contactForm">
                         <div className="contactID">
                             <input className="input smallInput" value={this.state.name} name="name" type="text" placeholder="Nom" onChange={(e) => this.handleChange(e, "name")}/>

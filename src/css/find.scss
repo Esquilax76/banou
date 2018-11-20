@@ -118,6 +118,8 @@ select:focus{
 
 .infoIcon{
 	margin-right: 10px;
+	font-size: 30px;
+
 }
 
 .infoWindowRow{
@@ -136,6 +138,7 @@ select:focus{
 		height: 35px;
 		margin-right: 10px;
 	}
+
 
 	.selectCity{
 		margin-bottom: 20px;
@@ -194,4 +197,11 @@ select:focus{
 .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
   	-webkit-transform: scaleX(1);
   	transform: scaleX(1);
+}
+
+@media screen and (max-width: 1450px)
+{
+	 .infoIcon{
+        font-size: 20px !important;
+    }
 }

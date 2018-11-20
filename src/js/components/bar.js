@@ -44,28 +44,26 @@ export class Bar extends React.Component {
         return (
             <div className="barContainer">
                 <div className="barContent">
-                    <div className="pageTitle barTitle">LE BANOUBAR</div>
+                    <div className="pageTitle barTitle">LE BREW PUB</div>
                     <div className="barInfoContainer">
                         <div className="barInfo bigInfo" style={{ display: "table" }}>
-                            Venez découvrir notre Brew pub au sein même de notre microbrasserie!
+                            Venez découvrir notre Brew Pub au sein même de notre microbrasserie!
                             <br/><br/>
-                            Un lieu chaleureux et convivial, où vous pourrrez déguster les bières La BANOU, tout en faisant une partie de fléchettes ou de babyfoot!
+                            Un lieu chaleureux et convivial, où vous pourrrez déguster les bières La BANOU, tout en faisant une partie de fléchettes ou de tarot!
                         </div>
-                        <FontAwesomeIcon icon={faMapMarkerAlt} style={{ color: "grey" }} className="infoIcon"/>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} style={{ color: "grey" }} className="infoBarIcon"/>
                         <div className="barInfo greyInfo">
                             Recherche d'un local en cours
                             <br/><br/>
                             06 58 26 98 58
                         </div>
-                        <FontAwesomeIcon icon={faClock} className="infoIcon"/>
+                        <FontAwesomeIcon icon={faClock} className="infoBarIcon"/>
                         <div className="barInfo">
                             <strong>Horaires d'ouverture du BANOU BAR</strong>
                             <br/><br/>
                             Du mardi au jeudi de 16h à 20h
                             <br/>
                             Le vendredi et le samedi de 16h à 22h
-                            <br/>
-                            Brunch le dimanche de 12h à 15h
                         </div>
                     </div>
                 </div>

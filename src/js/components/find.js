@@ -127,7 +127,7 @@ export class Find extends React.Component {
                             </div>
                             <div className="legend">
                                 <img src={pictoMicrob} className="legendImg"/>
-                                <div className="legendText">Le Banou Bar</div>
+                                <div className="legendText">Le Brew Pub</div>
                             </div>
                         </div>
                         <div className="legendInfos">

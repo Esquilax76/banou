@@ -29,7 +29,7 @@ class Header extends React.Component {
                 <Link to="/" className="headerTitle">LA BANOU</Link>
                 <nav class="nav">
                     <a href="#bieres" className="navItem hvr-underline-reveal activeMenu">NOS BIERES<div className="line"/></a>
-                    <a href="#bar" className="navItem hvr-underline-reveal">BANOUBAR<div className="line"/></a>
+                    <a href="#bar" className="navItem hvr-underline-reveal">LE BREW PUB<div className="line"/></a>
                     <a href="#lieux" className="navItem hvr-underline-reveal">POINTS DE VENTE<div className="line"/></a>
                     <a href="#histoire" className="navItem hvr-underline-reveal">NOTRE HISTOIRE<div className="line"/></a>
                     <a href="#contact" className="navItem hvr-underline-reveal">CONTACT<div className="line"/></a>
