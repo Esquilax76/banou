@@ -20,7 +20,7 @@ export class Fullpage extends React.Component {
         return (
             <ReactFullpage {...fullpageOptions} licenseKey="OPEN-SOURCE-GPLV3-LICENSE" render={({ state, fullpageApi }) => {
                 return (
-                    <div>
+                    <div style={{ height: "100%" }}>
                         <div className="section">
                             <Beers/>
                         </div>

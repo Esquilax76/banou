@@ -28,7 +28,7 @@ module.exports = {
             ebc: "14",
             glass: require("../../img/home/verre_blonde.png"),
             bottle: require("../../img/home/bouteille_blonde.png"),
-            color: "#571e04"
+            color: "black"
         },
         {
             name: "ROUSSE",
@@ -58,7 +58,7 @@ module.exports = {
             ebc: "35",
             glass: require("../../img/home/verre_session_ipa.png"),
             bottle: require("../../img/home/bouteille_session_ipa.png"),
-            color: "#571e04"
+            color: "black"
         }
     ],
     story: [

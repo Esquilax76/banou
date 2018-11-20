@@ -1,5 +1,9 @@
 $darkgrey : #202325;
 
+.section, .fp-tableCell{
+	height: 100% !important;
+}
+
 @font-face {
     font-family: titleFont;
     src: url(../fonts/SoulMission.ttf);

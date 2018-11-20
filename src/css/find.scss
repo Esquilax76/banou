@@ -33,13 +33,13 @@ $mediumgreygreen : #4A6161;
 .findColumn {
 	display: flex;
 	flex-direction: row;
-	height: 100%;
+	height: 70%;
     width: 100%;
 }
 
 .findLeftColumn {
 	width: calc(60% - 160px);
-	height: calc(100% - 100px);
+	//height: calc(100% - 150px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -48,7 +48,7 @@ $mediumgreygreen : #4A6161;
 }
 
 .findRightColumn {
-	height: calc(100% - 100px);
+	//height: calc(100% - 150px);
 	width: calc(40% - 240px);
 	display: flex;
 	flex-direction: column;

@@ -21,7 +21,7 @@ export class Bar extends React.Component {
     }
 
     componentDidMount() {
-        this.interval = setInterval(this.changeNews, 7000);
+        this.interval = setInterval(this.changeNews, 9000);
     }
 
     changeNews() {
