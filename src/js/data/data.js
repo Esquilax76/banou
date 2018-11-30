@@ -335,15 +335,17 @@ module.exports = {
         },
     ],
     barNews: [
+          {
+            title: "Découvrez la Bière de Noël !",
+            desc: "La bière de Noël arrive avec le froid! Chaleureuse et réconfortante, elle saura égayer les longues nuits d'hiver ... ",
+            image: require("../../img/news/noel.jpg")
+        },
+        
         {
             title: "Notre business plan est prêt !",
             desc: "Première grande étape du projet finalisée. Notre business plan est enfin fini, et nous pouvons commencer les démarches de financement... le crowdfounding arrive bientôt !",
             image: require("../../img/news/business.jpg")
         },
-        {
-            title: "Découvrez la Session IPA !",
-            desc: "La recette de notre bière de saison est prête. Une session IPA légère et désaltérante aux arômes d'agrumes. La bière idéale pour les fortes chaleurs !",
-            image: require("../../img/news/session.jpg")
-        },
+      
     ]
 };

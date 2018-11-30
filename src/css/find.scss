@@ -118,7 +118,7 @@ select:focus{
 
 .infoIcon{
 	margin-right: 10px;
-	font-size: 30px;
+	font-size: 20px;
 
 }
 
@@ -199,9 +199,3 @@ select:focus{
   	transform: scaleX(1);
 }
 
-@media screen and (max-width: 1450px)
-{
-	 .infoIcon{
-        font-size: 20px !important;
-    }
-}

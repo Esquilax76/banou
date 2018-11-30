@@ -61,9 +61,11 @@ export class Bar extends React.Component {
                         <div className="barInfo">
                             <strong>Horaires d'ouverture du BANOU BAR</strong>
                             <br/><br/>
-                            Du mardi au jeudi de 16h à 20h
+                            Du mardi au jeudi de 15h à 22h
                             <br/>
-                            Le vendredi et le samedi de 16h à 22h
+                            Le vendredi et le samedi de 12h à 23h
+                            <br/>
+                            Le dimanche de 12h à 19h
                         </div>
                     </div>
                 </div>
